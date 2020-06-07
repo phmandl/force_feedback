@@ -97,7 +97,6 @@ void readWheelStatus(WheelReadings* wheelValues) {
     wheelValues->mastergain = motor->MasterGain;
 }
 
-
 void FF_minus(double powerGain) {
     RacingWheelReading reading = wheel->GetCurrentReading();
     RacingWheelButtons buttonValues = reading.Buttons;
@@ -110,58 +109,6 @@ void FF_minus(double powerGain) {
 }
 
 
-//void initForceFeedback(RacingWheel^ args, int samplingTime) {
-//    wheel = args;
-//
-//    TimeSpan time;
-//    time.Duration = samplingTime;
-//
-//    effect_minus = ref new ForceFeedback::ConstantForceEffect();
-//    effect_plus = ref new ForceFeedback::ConstantForceEffect();
-//
-//    effect_minus->SetParameters(Windows::Foundation::Numerics::float3(-1.0, 0.0f, 0.0f), time);
-//    effect_plus->SetParameters(Windows::Foundation::Numerics::float3(+1.0, 0.0f, 0.0f), time);
-//
-//    IAsyncOperation<ForceFeedbackLoadEffectResult>^ request1 = wheel->WheelMotor->LoadEffectAsync(effect_minus);
-//
-//    auto task1 = create_task(request1);
-//    task1.then([](ForceFeedbackLoadEffectResult result) {
-//        if (ForceFeedbackLoadEffectResult::Succeeded == result)
-//        {
-//            printf("Effect loaded! \n");
-//        }
-//        else
-//        {
-//            printf("Effect failed! \n");
-//        }
-//        }).wait();
-//
-//        IAsyncOperation<ForceFeedbackLoadEffectResult>^ request2 = wheel->WheelMotor->LoadEffectAsync(effect_plus);
-//
-//        auto task2 = create_task(request2);
-//        task2.then([](ForceFeedbackLoadEffectResult result) {
-//            if (ForceFeedbackLoadEffectResult::Succeeded == result)
-//            {
-//                printf("Effect loaded! \n");
-//            }
-//            else
-//            {
-//                printf("Effect failed! \n");
-//            }
-//            }).wait();
-//}
-//
-//void FF_minus(RacingWheel^ args, double powerGain) {
-//    RacingWheelReading reading = args->GetCurrentReading();
-//    RacingWheelButtons buttonValues = reading.Buttons;
-//
-//    effect_minus->Gain = powerGain;
-//
-//    if (RacingWheelButtons::Button1 == (buttonValues & RacingWheelButtons::Button1)) {
-//        effect_minus->Start();
-//    }
-//}
-//
 //void FF_plus(RacingWheel^ args, double powerGain) {
 //    RacingWheelReading reading = args->GetCurrentReading();
 //    RacingWheelButtons buttonValues = reading.Buttons;

@@ -20,6 +20,8 @@ ForceFeedback::ConstantForceEffect^ effect_minus;
 ForceFeedback::ConstantForceEffect^ effect_plus;
 bool effectInitialized = false;
 
+bool* p;
+
 typedef struct wheelreadings {
     double throttle;
     double brake;
@@ -27,6 +29,25 @@ typedef struct wheelreadings {
     double angle;
     double mastergain;
 } WheelReadings;
+
+typedef struct buttonReadings {
+    bool gearup;
+    bool geardown;
+    bool ST;
+    bool SE;
+    bool X;
+    bool O;
+    bool Square;
+    bool Triangle;
+    bool L2;
+    bool R2;
+    bool L3;
+    bool R3;
+    bool DPadDown;
+    bool DPadUp;
+    bool DPadLeft;
+    bool DPadRight;
+} buttonReadings;
 
 void onRacingWheelAdded(Platform::Object^ sender, RacingWheel^ args) {
     wheel = args;
@@ -111,9 +132,178 @@ void FF_minus(double powerGain) {
     RacingWheelButtons buttonValues = reading.Buttons;
 
     effect_minus->Gain = powerGain;
+    effect_minus->Start();
 
+}
+
+void FF_plus(double powerGain) {
+    RacingWheelReading reading = wheel->GetCurrentReading();
+    RacingWheelButtons buttonValues = reading.Buttons;
+
+    effect_plus->Gain = powerGain;
+    effect_plus->Start();
+}
+
+void readingButton(buttonReadings* bValues) {
+    //get current reading
+    RacingWheelReading reading = wheel->GetCurrentReading();
+    RacingWheelButtons buttonValues = reading.Buttons;
+
+    // Bit Magic --> 0000010 for example means one button pressed...
+    // and so on.
+
+    // -------------------------------GEAR STUFF------------------------------------------------
+    // -----------------------------------------------------------------------------------------
+    if (RacingWheelButtons::NextGear == (buttonValues & RacingWheelButtons::NextGear)) {
+        //printf("gearup ");
+        bValues->gearup = true;
+    }
+    else {
+        bValues->gearup = false;
+    }
+
+    if (RacingWheelButtons::PreviousGear == (buttonValues & RacingWheelButtons::PreviousGear)) {
+        //printf("geardown ");
+        bValues->geardown = true;
+    }
+    else {
+        bValues->geardown = false;
+    }
+
+    // -----------------------------BUTTON STUFF------------------------------------------------
+    // -----------------------------------------------------------------------------------------
+    // BUTTON 1 == ST 
+    // on Thrustmaster T300
     if (RacingWheelButtons::Button1 == (buttonValues & RacingWheelButtons::Button1)) {
-        effect_minus->Start();
+        //printf("ST ");
+        bValues->ST = true;
+    }
+    else {
+        bValues->ST = false;
+    }
+
+    // BUTTON 3 == SE
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button2 == (buttonValues & RacingWheelButtons::Button2)) {
+        //printf("SE ");
+        bValues->SE = true;
+    }
+    else {
+        bValues->SE = false;
+    }
+
+    // BUTTON 3 == X 
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button3 == (buttonValues & RacingWheelButtons::Button3)) {
+        //printf("X ");
+        bValues->X = true;
+    }
+    else {
+        bValues->X = false;
+    }
+
+    // BUTTON 4 == O 
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button4 == (buttonValues & RacingWheelButtons::Button4)) {
+        //printf("O ");
+        bValues->O = true;
+    }
+    else {
+        bValues->O = false;
+    }
+
+    // BUTTON 5 == Square 
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button5 == (buttonValues & RacingWheelButtons::Button5)) {
+        //printf("Square ");
+        bValues->Square = true;
+    }
+    else {
+        bValues->Square = false;
+    }
+
+    // BUTTON 6 == Triangle 
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button6 == (buttonValues & RacingWheelButtons::Button6)) {
+        //printf("Triangle ");
+        bValues->Triangle = true;
+    }
+    else {
+        bValues->Triangle = false;
+    }
+
+    // BUTTON 7 == L2 
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button7 == (buttonValues & RacingWheelButtons::Button7)) {
+        //printf("L2 ");
+        bValues->L2 = true;
+    }
+    else {
+        bValues->L2 = false;
+    }
+
+    // BUTTON 8 == R2 
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button8 == (buttonValues & RacingWheelButtons::Button8)) {
+        //printf("R2 ");
+        bValues->R2 = true;
+    }
+    else {
+        bValues->R2 = false;
+    }
+
+    // BUTTON 9 == L3 
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button9 == (buttonValues & RacingWheelButtons::Button9)) {
+        //printf("L3 ");
+        bValues->L3 = true;
+    }
+    else {
+        bValues->L3 = false;
+    }
+
+    // BUTTON 10 == R3 
+    // on Thrustmaster T300
+    if (RacingWheelButtons::Button10 == (buttonValues & RacingWheelButtons::Button10)) {
+        //printf("R3 ");
+        bValues->R3 = true;
+    }
+    else {
+        bValues->R3 = false;
+    }
+
+    // ---------------------------------DPAD STUFF----------------------------------------------
+    // -----------------------------------------------------------------------------------------
+    if (RacingWheelButtons::DPadDown == (buttonValues & RacingWheelButtons::DPadDown)) {
+        //printf("DPadDown ");
+        bValues->DPadDown = true;
+    }
+    else {
+        bValues->DPadDown = false;
+    }
+
+    if (RacingWheelButtons::DPadUp == (buttonValues & RacingWheelButtons::DPadUp)) {
+        //printf("DPadUp ");
+        bValues->DPadUp = true;
+    }
+    else {
+        bValues->DPadUp = false;
+    }
+
+    if (RacingWheelButtons::DPadLeft == (buttonValues & RacingWheelButtons::DPadLeft)) {
+        //printf("DPadLeft ");
+        bValues->DPadLeft = true;
+    }
+    else {
+        bValues->DPadLeft = false;
+    }
+
+    if (RacingWheelButtons::DPadRight == (buttonValues & RacingWheelButtons::DPadRight)) {
+        //printf("DPadRight ");
+        bValues->DPadRight = true;
+    }
+    else {
+        bValues->DPadRight = false;
     }
 }
 
@@ -125,15 +315,30 @@ int main(Platform::Array<Platform::String^>^ args)
     initForceFeedback(3000000);
 
     WheelReadings readings;
+    buttonReadings bReadings;
 
     while (true) {
         readWheelStatus(&readings);
-
+        readingButton(&bReadings);
+        
         printf("Angle: %lf ", readings.angle);
         printf("Brake: %lf ", readings.brake);
-        printf("Throttle: %lf ", readings.throttle);
+        printf("Throttle: %lf \n", readings.throttle);
 
-        FF_minus(1.0);
+        if (bReadings.X == true) {
+            FF_minus(1.0);
+        }
+
+        if (bReadings.O == true) {
+            FF_plus(1.0);
+        }
+
+        // Read the whole struct with pointers and print it
+        p = (bool*)&bReadings;
+        int i;
+        for (i = 0; i < 16; i = i + 1) {
+            printf("Button Nr. %d: %d\n", i+1, *(p + i));
+        }
 
         printf("\n");
         Sleep(100);
