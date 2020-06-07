@@ -12,7 +12,9 @@ int main(Platform::Array<Platform::String^>^ args)
     while (true) {
         readWheelStatus(&readings);
 
-        printf("Angle: %lf", readings.angle);
+        printf("Angle: %lf ", readings.angle);
+        printf("Brake: %lf ", readings.brake); 
+        printf("Throttle: %lf ", readings.throttle);
 
         FF_minus(1.0);
 
