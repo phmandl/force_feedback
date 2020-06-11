@@ -1,0 +1,6 @@
+Open build_FF_UWP_MATLAB_DLL
+Run first command
+if neccesarry delete define.... .mlx/.m and .xml
+Modify newly generated .mlx as written in the build_... file. 
+
+COPY newly generated folder with interface file with your .dll into your current matalab folder and work with it

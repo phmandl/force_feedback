@@ -28,23 +28,32 @@ void onRacingWheelAdded(Platform::Object^ sender, RacingWheel^ args) {
     wheel = args;
 }
 
-void initRacingWheel()
+bool initRacingWheel()
 {
     RacingWheel::RacingWheelAdded += ref new EventHandler<RacingWheel^>(&onRacingWheelAdded);
+
+    int counter = 0;
 
     while (true) {
         int size = RacingWheel::RacingWheels->Size;
 
         if (size == 0) {
-            std::cout << "Connecting...\n";
+            //std::cout << "Connecting...\n";
+
+            counter += 1;
+
+            if (counter == 1000) {
+                return false;
+            }
         }
         else {
-            std::cout << "Connected!\n";
-            break;
+            //std::cout << "Connected!\n";
+            return true;
         }
 
         Sleep(10);
     }
+
 }
 
 int initForceFeedback(int samplingTime) {
@@ -73,21 +82,21 @@ int initForceFeedback(int samplingTime) {
         }
         }).wait();
 
-        IAsyncOperation<ForceFeedbackLoadEffectResult>^ request2 = wheel->WheelMotor->LoadEffectAsync(effect_plus);
+    IAsyncOperation<ForceFeedbackLoadEffectResult>^ request2 = wheel->WheelMotor->LoadEffectAsync(effect_plus);
 
-        auto task2 = create_task(request2);
-        task2.then([&error](ForceFeedbackLoadEffectResult result) {
-            if (ForceFeedbackLoadEffectResult::Succeeded == result)
-            {
-                printf("Effect loaded! \n");
-            }
-            else
-            {
-                error = -1;
-            }
-            }).wait();
+    auto task2 = create_task(request2);
+    task2.then([&error](ForceFeedbackLoadEffectResult result) {
+        if (ForceFeedbackLoadEffectResult::Succeeded == result)
+        {
+            printf("Effect loaded! \n");
+        }
+        else
+        {
+            error = -1;
+        }
+        }).wait();
 
-            return error;
+        return error;
 }
 
 void readWheelStatus(WheelReadings* wheelValues) {
@@ -100,21 +109,31 @@ void readWheelStatus(WheelReadings* wheelValues) {
     wheelValues->clutch = reading.Clutch;
     wheelValues->angle = reading.Wheel;
     wheelValues->mastergain = motor->MasterGain;
+    wheelValues->timestamp = reading.Timestamp;
 }
 
 void FF_minus(double powerGain) {
-    RacingWheelReading reading = wheel->GetCurrentReading();
-    RacingWheelButtons buttonValues = reading.Buttons;
+    // With state we could check if the effect is still running or not
+    //effect_minus->State
 
+    // taking the easy approach, by just stopping all effects
+    effect_minus->Stop();
+    effect_plus->Stop();
+
+    // now start the new one
     effect_minus->Gain = powerGain;
     effect_minus->Start();
-
 }
 
 void FF_plus(double powerGain) {
-    RacingWheelReading reading = wheel->GetCurrentReading();
-    RacingWheelButtons buttonValues = reading.Buttons;
+    // With state we could check if the effect is still running or not
+    //effect_plus->State
 
+    // taking the easy approach, by just stopping all effects
+    effect_minus->Stop();
+    effect_plus->Stop();
+
+    // now start the new one
     effect_plus->Gain = powerGain;
     effect_plus->Start();
 }

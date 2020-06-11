@@ -14,6 +14,7 @@ extern "C" {
         double clutch;
         double angle;
         double mastergain;
+        unsigned long long timestamp;
     } WheelReadings;
 
     typedef struct buttonReadings {
@@ -36,7 +37,7 @@ extern "C" {
     } buttonReadings;
 
 	// Initialize the racing wheel
-	FF_UWP_API void initRacingWheel();
+	FF_UWP_API bool initRacingWheel();
 	FF_UWP_API int initForceFeedback(int samplingTime);
 	FF_UWP_API void readWheelStatus(WheelReadings* wheelValues);
 	FF_UWP_API void FF_minus(double gain);
@@ -50,6 +51,7 @@ extern "C" {
         double clutch;
         double angle;
         double mastergain;
+        unsigned long long timestamp;
     } WheelReadings;
 
     typedef struct buttonReadings {
@@ -72,7 +74,7 @@ extern "C" {
     } buttonReadings;
 
     // Initialize the racing wheel
-    FF_UWP_API void initRacingWheel();
+    FF_UWP_API bool initRacingWheel();
     FF_UWP_API int initForceFeedback(int samplingTime);
     FF_UWP_API void readWheelStatus(WheelReadings* wheelValues);
     FF_UWP_API void FF_minus(double gain);
