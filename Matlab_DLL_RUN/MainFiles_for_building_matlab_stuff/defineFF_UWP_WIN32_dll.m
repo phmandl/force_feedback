@@ -11,7 +11,7 @@
 function libDef = defineFF_UWP_WIN32_dll()
 libDef = clibgen.LibraryDefinition("FF_UWP_WIN32_dllData.xml");
 %% OutputFolder and Libraries 
-libDef.OutputFolder = "D:\Philipp\repos\uwp_force_feedback\Matlab_DLL_RUN";
+libDef.OutputFolder = "D:\Philipp\repos\uwp_force_feedback\Matlab_DLL_RUN\MainFiles_for_building_matlab_stuff";
 libDef.Libraries = "FF_UWP_WIN32_dll.lib";
 
 %% C++ class |wheelreadings| with MATLAB name |clib.FF_UWP_WIN32_dll.WheelReadings| 
