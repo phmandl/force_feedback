@@ -18,6 +18,7 @@
 struct wheelreadings wheelValues;
 struct buttonReadings buttonValues;
 /* %%%-SFUNWIZ_wrapper_includes_Changes_END --- EDIT HERE TO _BEGIN */
+#define u_width 1
 #define y_width 1
 
 /*
@@ -32,7 +33,7 @@ struct buttonReadings buttonValues;
  * Start function
  *
  */
-void RacingWheel_Start_wrapper(const int32_T *Ts_FF, const int_T p_width0)
+void RacingWheel_Start_wrapper(const real_T *Ts_FF, const int_T p_width0)
 {
 /* %%%-SFUNWIZ_wrapper_Start_Changes_BEGIN --- EDIT HERE TO _END */
 /*
@@ -47,8 +48,28 @@ initForceFeedback(0.01*1e9);
  * Output function
  *
  */
-void RacingWheel_Outputs_wrapper(real_T *y0,
-			const int32_T *Ts_FF, const int_T p_width0)
+void RacingWheel_Outputs_wrapper(const real_T *FF,
+			boolean_T *gearup,
+			boolean_T *geardown,
+			boolean_T *ST,
+			boolean_T *SE,
+			boolean_T *X,
+			boolean_T *O,
+			boolean_T *Square,
+			boolean_T *Triangle,
+			boolean_T *L2,
+			boolean_T *R2,
+			boolean_T *L3,
+			boolean_T *R3,
+			boolean_T *DPadDown,
+			boolean_T *DPadUp,
+			boolean_T *DPadLeft,
+			boolean_T *DPadRight,
+			real_T *throttle,
+			real_T *brake,
+			real_T *clutch,
+			real_T *angle,
+			const real_T *Ts_FF, const int_T p_width0)
 {
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */
 /* This sample sets the output equal to the input
@@ -58,19 +79,35 @@ void RacingWheel_Outputs_wrapper(real_T *y0,
       y1[0].re = u1[0].re;
       y1[0].im = u1[0].im;
  */
-
-
 readWheelStatus(&wheelValues);
 readingButton(&buttonValues);
 
-y0[0] = wheelValues.angle;
+throttle[0] = wheelValues.throttle;
+brake[0] = wheelValues.brake;
+clutch[0] = wheelValues.clutch;
+angle[0] = wheelValues.angle;
 
-if (buttonValues.X == true) {
-    FF_minus(0.5);
-}
-
-if (buttonValues.O == true) {
-    FF_plus(0.5);
+gearup[0] = buttonValues.gearup;
+geardown[0] = buttonValues.geardown;
+ST[0] = buttonValues.ST;
+SE[0] = buttonValues.SE;
+X[0] = buttonValues.X;
+O[0] = buttonValues.O;
+Square[0] = buttonValues.Square;
+Triangle[0] = buttonValues.Triangle;
+L2[0] = buttonValues.L2;
+R2[0] = buttonValues.R2;
+L3[0] = buttonValues.L3;
+R3[0] = buttonValues.R3;
+DPadDown[0] = buttonValues.DPadDown;
+DPadUp[0] = buttonValues.DPadUp;
+DPadLeft[0] = buttonValues.DPadLeft;
+DPadRight[0] = buttonValues.DPadRight;
+        
+if (FF[0] > 0) {
+    FF_minus(FF[0]);
+} else if (FF[0] < 0) {
+    FF_plus(-FF[0]);
 }
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
