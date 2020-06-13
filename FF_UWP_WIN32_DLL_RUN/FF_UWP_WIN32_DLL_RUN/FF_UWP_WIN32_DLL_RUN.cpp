@@ -9,7 +9,7 @@ int main(Platform::Array<Platform::String^>^ args)
     CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 
     initRacingWheel();
-    initForceFeedback(3000000);
+    initForceFeedback(0.1*1e7);
 
     WheelReadings readings;
     buttonReadings bReadings;
@@ -23,11 +23,11 @@ int main(Platform::Array<Platform::String^>^ args)
         printf("Throttle: %lf \n", readings.throttle);
 
         if (bReadings.X == true) {
-            FF_minus(1.0);
+            FF_minus(0.5);
         }
 
         if (bReadings.O == true) {
-            FF_plus(1.0);
+            FF_plus(0.5);
         }
 
         // Read the whole struct with pointers and print it

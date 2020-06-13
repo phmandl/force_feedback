@@ -41,7 +41,7 @@ void RacingWheel_Start_wrapper(const real_T *Ts_FF, const int_T p_width0)
  */
 
 initRacingWheel();
-initForceFeedback(0.01*1e9);
+initForceFeedback(Ts_FF[0]*1e7); // Ts are ticks, 1 Tick are 100 ns
 /* %%%-SFUNWIZ_wrapper_Start_Changes_END --- EDIT HERE TO _BEGIN */
 }
 /*
@@ -105,9 +105,9 @@ DPadLeft[0] = buttonValues.DPadLeft;
 DPadRight[0] = buttonValues.DPadRight;
         
 if (FF[0] > 0) {
-    FF_minus(FF[0]);
+    FF_plus(FF[0]);
 } else if (FF[0] < 0) {
-    FF_plus(-FF[0]);
+    FF_minus(-FF[0]);
 }
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }

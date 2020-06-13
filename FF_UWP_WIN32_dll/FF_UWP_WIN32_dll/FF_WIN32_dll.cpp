@@ -58,13 +58,13 @@ bool initRacingWheel()
 
 int initForceFeedback(int samplingTime) {
     TimeSpan time;
-    time.Duration = samplingTime;
+    time.Duration = samplingTime; // samplingtime is in 100 ns Ticks --> Ts*1e7 Ticks
 
     effect_minus = ref new ForceFeedback::ConstantForceEffect();
     effect_plus = ref new ForceFeedback::ConstantForceEffect();
 
-    effect_minus->SetParameters(Windows::Foundation::Numerics::float3(-1.0, 0.0f, 0.0f), time);
-    effect_plus->SetParameters(Windows::Foundation::Numerics::float3(+1.0, 0.0f, 0.0f), time);
+    effect_plus->SetParameters(Windows::Foundation::Numerics::float3(-1.0, 0.0f, 0.0f), time);
+    effect_minus->SetParameters(Windows::Foundation::Numerics::float3(+1.0, 0.0f, 0.0f), time);
 
     IAsyncOperation<ForceFeedbackLoadEffectResult>^ request1 = wheel->WheelMotor->LoadEffectAsync(effect_minus);
 
