@@ -7,7 +7,7 @@ fprintf('Looking for a Racing Wheel! \n');
 assert(clib.FF_UWP_WIN32_dll.initRacingWheel == true,...
     'No Racing Wheel found! Connect one!')
 fprintf('Racing Wheel found! \n')
-assert(clib.FF_UWP_WIN32_dll.initForceFeedback(Ts*1e9) == 0,...
+assert(clib.FF_UWP_WIN32_dll.initForceFeedback(Ts*1e7) == 0,...
     'Problem with Force Feedback');
 fprintf('Force Feedback initialized! \n');
 
@@ -31,7 +31,7 @@ yline(1,'r-');
 % LOOP OVER EVERYTHING
 counter = 1;
 N = 1000;
-Band = [0 0.5];
+Band = [0 1];
 Range = [-1 1];
 u = idinput(N,'prbs',Band,Range);
 
@@ -48,9 +48,9 @@ while true
         
     % FORCE-FEEDBACK STUFF -> DO SOMETHING ON BUTTON ACTION
     if currentFF >= 0
-        clib.FF_UWP_WIN32_dll.FF_minus(currentFF);
+        clib.FF_UWP_WIN32_dll.FF_plus(currentFF);
     elseif currentFF < 0
-        clib.FF_UWP_WIN32_dll.FF_plus(-currentFF);
+        clib.FF_UWP_WIN32_dll.FF_minus(-currentFF);
     end
     
     % PAUSE

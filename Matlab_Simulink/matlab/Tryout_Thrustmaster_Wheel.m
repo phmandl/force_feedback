@@ -2,7 +2,7 @@
 addpath('FF_UWP_WIN32_dll');
 
 % INIT RACING WHEEL WITH .DLL and set FORCE FEEDBACK
-Ts = 3000000; % in ns
+Ts = 0.1*1e7; % in 100ns Ticks
 fprintf('Looking for a Racing Wheel! \n');
 assert(clib.FF_UWP_WIN32_dll.initRacingWheel == true,...
     'No Racing Wheel found! Connect one!')
