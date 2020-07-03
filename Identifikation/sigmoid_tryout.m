@@ -2,7 +2,7 @@ close all
 
 center = 0;
 steepness = 1;
-scale = 2;
+scale = 10;
 
 x = -10:0.1:10;
 
