@@ -1,6 +1,6 @@
 close all
 
-steepness = 1;
+steepness = 2;
 scale = 10;
 
 x = -10:0.1:10;

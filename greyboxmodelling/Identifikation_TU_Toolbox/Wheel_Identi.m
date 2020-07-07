@@ -2,23 +2,21 @@ clear all;
 clc;
 
 %% Create nonlinear ODE Model
-test_func = @(x,u,theta) [x(2); 
-                          theta(1)*u - theta(2)*x(2)];
                       
-%       test_func = @(x,u,theta) [x(2); 
-%           1/theta(1)*(u + theta(2) - 2*theta(2)/(1 + exp(-theta(3)*x(2))))];
+test_func = @(x,u,theta) [x(2);
+    1/theta(1)*(u + theta(2) - 2*theta(2)/(1 + exp(-theta(3)*x(2))))];
 % test_func = @(x,u,theta) [x(2); 1/theta(1)*(u - theta(2)*x(2))];
 output_func = @(x,u,theta) x(1);
 
 SimpleOdeModel = nonlinearModel('derivativeFunction',test_func,...
                       'outputFunction',output_func,...
-                      'theta',[5;1],...
+                      'theta',[0.21;1;5],...
                       'simTol',1e-15,...
                       'statSolMethod','sol',... 
                       'nrOfInputs',1,...
                       'nrOfOutputs',1,...
                       'nrOfStates',2,...
-                      'freeParamsForOptIdx',[1,2],...
+                      'freeParamsForOptIdx',[2,3],...
                       'theta_labels', {'a','b'});
                   
 %% Get my saved data
@@ -33,14 +31,14 @@ u = out.saveData.Data(1:end-1,2)';
 % legend;
 
 dt = t_vec(2) - t_vec(1);
-x0_initGuess = ones(SimpleOdeModel.nrOfStates,1);
-% x0_initGuess = [y_vec(1);0.01];
+% x0_initGuess = ones(SimpleOdeModel.nrOfStates,1);
+x0_initGuess = [y_vec(1);0.01];
 % x0_initGuess = [1;100];
 
 %% Nonlinear Test Optimization: "Forget" theta and reestimate theta from data
 %  The nonlinear model is parameterized to the global experiment.
 
-SimpleOdeModel.theta = [1;1]; % "Wrong parameters" for the start of the optimization
+SimpleOdeModel.theta = [0.21;1;5]; % "Wrong parameters" for the start of the optimization
 SimpleOdeModel.createIdentDataStruct(1)
 
 %%% Load Data into Framework
@@ -66,8 +64,8 @@ SimpleOdeModel.paramOptBase = 'lin';
 % SimpleOdeModel.regularizationWeight = 0;
 
 %%% Optimization Solver Settings
-% method = 'fminsearch';
-method = 'fmincon';
+method = 'fminsearch';
+% method = 'fmincon';
 
 options = optimset(method);
 options.Display = 'iter';

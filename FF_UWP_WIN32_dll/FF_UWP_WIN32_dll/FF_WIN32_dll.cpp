@@ -117,8 +117,8 @@ void FF_minus(double powerGain) {
     //effect_minus->State
 
     // taking the easy approach, by just stopping all effects
-    effect_minus->Stop();
-    effect_plus->Stop();
+    //effect_minus->Stop();
+    //effect_plus->Stop();
 
     // now start the new one
     effect_minus->Gain = powerGain;
@@ -130,8 +130,8 @@ void FF_plus(double powerGain) {
     //effect_plus->State
 
     // taking the easy approach, by just stopping all effects
-    effect_minus->Stop();
-    effect_plus->Stop();
+    //effect_minus->Stop();
+    //effect_plus->Stop();
 
     // now start the new one
     effect_plus->Gain = powerGain;
