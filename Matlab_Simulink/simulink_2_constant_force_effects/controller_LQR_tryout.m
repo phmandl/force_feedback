@@ -2,7 +2,7 @@ clear; clc;
 close all;
 
 J = 7.5924;
-Ts = 0.01;
+Ts = 0.03;
 
 %% Controller Script
 
@@ -15,8 +15,8 @@ sys_con = ss(A,B,C,0);
 %% Discrete system
 sys_dis = c2d(sys_con,Ts);
 
-Q = diag([10,5]);
-R = 1;
+Q = diag([1e3,1]);
+R = 1e-3;
 [K,P,e] = dlqr(sys_dis.A,sys_dis.B,Q,R);
 Kw = 1/(sys_dis.C*inv(eye(2) - sys_dis.A + sys_dis.B*K)*sys_dis.B);
 
@@ -27,8 +27,15 @@ figure;
 step(sys_close);
 damp(sys_close);
 
-%% Buidl observer
-poles_obsv = real(pole(sys_close))/100;
+% place poles with ackermann
+% poles = [0.99999,0.99];
+% K = acker(sys_dis.A,sys_dis.B,poles)
+% Kw = 1/(sys_dis.C*inv(eye(2) - sys_dis.A + sys_dis.B*K)*sys_dis.B);
+
+%% Build observer
+poles_obsv = real(pole(sys_close))/10000;
+poles_obsv = [0;0];
+% poles_obsv = [0.9;0.9];
 
 P = sym('P',[2,1]);
 syms z
