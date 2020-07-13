@@ -42,7 +42,9 @@ extern "C" {
 	FF_UWP_API void readWheelStatus(WheelReadings* wheelValues);
 	FF_UWP_API void FF_minus(double gain);
     FF_UWP_API void FF_plus(double gain);
+	FF_UWP_API void FF_zero();
     FF_UWP_API void readingButton(buttonReadings* bValues);
+	FF_UWP_API void kill_FF();
 }
 #else
     typedef struct wheelreadings {
@@ -79,5 +81,7 @@ extern "C" {
     FF_UWP_API void readWheelStatus(WheelReadings* wheelValues);
     FF_UWP_API void FF_minus(double gain);
     FF_UWP_API void FF_plus(double gain);
+	FF_UWP_API void FF_zero();
     FF_UWP_API void readingButton(buttonReadings* bValues);
+	FF_UWP_API void kill_FF();
 #endif

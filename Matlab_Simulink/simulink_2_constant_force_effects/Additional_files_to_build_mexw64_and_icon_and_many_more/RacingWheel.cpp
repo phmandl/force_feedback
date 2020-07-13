@@ -26,7 +26,7 @@
  * | See matlabroot/simulink/src/sfuntmpl_doc.c for a more detailed template |
  *  ------------------------------------------------------------------------- 
  *
- * Created: Tue Jul 07 10:02:51 2020
+ * Created: Wed Jul 08 10:44:19 2020
  */
 
 #define S_FUNCTION_LEVEL 2
@@ -380,7 +380,7 @@
 #define PARAMETER_0_DTYPE     real_T
 #define PARAMETER_0_COMPLEX   COMPLEX_NO
 
-#define SAMPLE_TIME_0         Ts_FF
+#define SAMPLE_TIME_0         0.01
 #define NUM_DISC_STATES       0
 #define DISC_STATES_IC        [0]
 #define NUM_CONT_STATES       0
@@ -426,6 +426,7 @@ extern void RacingWheel_Outputs_wrapper(const real_T *FF,
 			real_T *clutch,
 			real_T *angle,
 			const real_T *Ts_FF, const int_T p_width0);
+extern void RacingWheel_Terminate_wrapper(const real_T *Ts_FF, const int_T p_width0);
 /*====================*
  * S-function methods *
  *====================*/
@@ -440,14 +441,6 @@ static void mdlCheckParameters(SimStruct *S)
     int paramIndex  = 0;
     bool invalidParam = false;
     /* All parameters must match the S-function Builder Dialog */
-
-    {
-        const mxArray *pVal0 = ssGetSFcnParam(S, 0);
-        if (!mxIsDouble(pVal0)) {
-            ssSetErrorStatus(S, "Sample time parameter Ts_FF must be of type double");
-            return;
-        }
-    }
 
     {
         const mxArray *pVal0 = ssGetSFcnParam(S, 0);
@@ -612,7 +605,7 @@ static void mdlInitializeSizes(SimStruct *S)
  */
 static void mdlInitializeSampleTimes(SimStruct *S)
 {
-    ssSetSampleTime(S, 0, *mxGetPr(ssGetSFcnParam(S, 0)));
+    ssSetSampleTime(S, 0, SAMPLE_TIME_0);
     ssSetModelReferenceSampleTimeDefaultInheritance(S);
     ssSetOffsetTime(S, 0, 0.0);
 }
@@ -707,6 +700,10 @@ static void mdlOutputs(SimStruct *S, int_T tid)
  */
 static void mdlTerminate(SimStruct *S)
 {
+    const int_T   p_width0  = mxGetNumberOfElements(PARAM_DEF0(S));
+    const real_T *Ts_FF = (const real_T *) mxGetData(PARAM_DEF0(S));
+    
+    RacingWheel_Terminate_wrapper(Ts_FF, p_width0);
 
 }
 

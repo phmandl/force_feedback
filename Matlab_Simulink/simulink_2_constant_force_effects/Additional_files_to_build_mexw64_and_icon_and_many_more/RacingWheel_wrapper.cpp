@@ -41,7 +41,7 @@ void RacingWheel_Start_wrapper(const real_T *Ts_FF, const int_T p_width0)
  */
 
 initRacingWheel();
-initForceFeedback(Ts_FF[0]*1e7); // Ts are ticks, 1 Tick are 100 ns
+initForceFeedback(50*1e7); // Ts are ticks, 1 Tick are 100 ns
 /* %%%-SFUNWIZ_wrapper_Start_Changes_END --- EDIT HERE TO _BEGIN */
 }
 /*
@@ -108,8 +108,24 @@ if (FF[0] > 0) {
     FF_plus(FF[0]);
 } else if (FF[0] < 0) {
     FF_minus(-FF[0]);
+} else if (FF[0] == 0) {
+    FF_zero();
 }
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
 
+/*
+ * Terminate function
+ *
+ */
+void RacingWheel_Terminate_wrapper(const real_T *Ts_FF, const int_T p_width0)
+{
+/* %%%-SFUNWIZ_wrapper_Terminate_Changes_BEGIN --- EDIT HERE TO _END */
+/*
+ * Custom Terminate code goes here.
+ */
+
+kill_FF();
+/* %%%-SFUNWIZ_wrapper_Terminate_Changes_END --- EDIT HERE TO _BEGIN */
+}
 

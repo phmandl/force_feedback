@@ -30,14 +30,17 @@ damp(sys_close);
 %% Buidl observer
 poles_obsv = real(pole(sys_close))/100;
 
+% P = acker(sys_dis.A,sys_dis.B,poles_obsv);
+% sys_close_obsv = ss(sys_dis.A - P'*sys_dis.C, [sys_dis.B, P'],diag([1,1]),0,Ts);
+% damp(sys_close_obsv)
+
 P = sym('P',[2,1]);
-syms z
-F = sys_dis.A - P*sys_dis.C;
-detF = det(z*eye(2) - F);
-[C,T] = coeffs(detF,z,'all');
-desirePoles = poly(poles_obsv);
-SOL = solve(C == desirePoles);
-P = double([SOL.P1;SOL.P2]);
+
+F = sys_dis.A - P*sys_dis.C
+detF = det(F) == 0
+solve(F,P)
 
 
- 
+
+
+

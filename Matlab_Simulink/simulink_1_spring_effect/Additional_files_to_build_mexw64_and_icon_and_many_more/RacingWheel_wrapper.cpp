@@ -106,8 +106,6 @@ DPadRight[0] = buttonValues.DPadRight;
 
 //set bias for spring
 effect_spring_bias(FF_bias[0]);
-
-
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
 

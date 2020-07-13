@@ -108,8 +108,6 @@ DPadRight[0] = buttonValues.DPadRight;
 
 // change with SetParameters(Vector and gain, time)
 FF_constant_gain(FF[0],Ts_FF[0]*1e7);
-
-
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
 

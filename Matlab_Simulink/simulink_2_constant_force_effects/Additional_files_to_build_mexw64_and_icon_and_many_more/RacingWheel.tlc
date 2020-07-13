@@ -1,5 +1,5 @@
 %% File : RacingWheel.tlc
-%% Created : Tue Jul 07 10:02:51 2020
+%% Created : Wed Jul 08 10:44:19 2020
 %%
 %% Description: 
 %%   Simulink Coder wrapper functions interface generated for 
@@ -110,6 +110,19 @@
   %%
 %endfunction
 
+%% Function: Terminate ========================================================
+%%
+%function Terminate(block, system) Output
+   /* %<Type> Block: %<Name> */
+  %assign nelements1 = LibBlockParameterSize(P1)
+  %assign param_width1 = nelements1[0] * nelements1[1]
+  %if (param_width1) > 1
+    %assign pp1 = LibBlockMatrixParameterBaseAddr(P1)
+  %else
+    %assign pp1 = LibBlockParameterAddr(P1, "", "", 0)
+  %endif
+  RacingWheel_Terminate_wrapper(%<pp1>, %<param_width1>);
+%endfunction
 
 %% [EOF] RacingWheel.tlc
 

@@ -74,7 +74,8 @@ int initForceFeedback(int samplingTime) {
     task1.then([&error](ForceFeedbackLoadEffectResult result) {
         if (ForceFeedbackLoadEffectResult::Succeeded == result)
         {
-            printf("Effect loaded! \n");
+			effect_minus->Gain = 0;
+			effect_minus->Start();
         }
         else
         {
@@ -88,7 +89,8 @@ int initForceFeedback(int samplingTime) {
     task2.then([&error](ForceFeedbackLoadEffectResult result) {
         if (ForceFeedbackLoadEffectResult::Succeeded == result)
         {
-            printf("Effect loaded! \n");
+			effect_plus->Gain = 0;
+			effect_plus->Start();
         }
         else
         {
@@ -121,8 +123,8 @@ void FF_minus(double powerGain) {
     //effect_plus->Stop();
 
     // now start the new one
+	effect_plus->Gain = 0;
     effect_minus->Gain = powerGain;
-    effect_minus->Start();
 }
 
 void FF_plus(double powerGain) {
@@ -134,8 +136,18 @@ void FF_plus(double powerGain) {
     //effect_plus->Stop();
 
     // now start the new one
-    effect_plus->Gain = powerGain;
-    effect_plus->Start();
+	effect_minus->Gain = 0;
+	effect_plus->Gain = powerGain;
+}
+
+void FF_zero() {
+	effect_plus->Gain = 0;
+	effect_minus->Gain = 0;
+}
+
+void kill_FF() {
+	//just for simplifcation we just stop all effects
+	wheel->WheelMotor->StopAllEffects();
 }
 
 void readingButton(buttonReadings* bValues) {
