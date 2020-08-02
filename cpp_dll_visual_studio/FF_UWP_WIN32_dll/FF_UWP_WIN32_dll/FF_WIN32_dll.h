@@ -38,7 +38,7 @@ extern "C" {
 
 	// Initialize the racing wheel
 	FF_UWP_API bool initRacingWheel();
-	FF_UWP_API int initForceFeedback(int samplingTime);
+	FF_UWP_API int initForceFeedback(int64 samplingTime);
 	FF_UWP_API void readWheelStatus(WheelReadings* wheelValues);
 	FF_UWP_API void FF_minus(double gain);
     FF_UWP_API void FF_plus(double gain);
@@ -77,7 +77,7 @@ extern "C" {
 
     // Initialize the racing wheel
     FF_UWP_API bool initRacingWheel();
-    FF_UWP_API int initForceFeedback(int samplingTime);
+    FF_UWP_API int initForceFeedback(int64 samplingTime);
     FF_UWP_API void readWheelStatus(WheelReadings* wheelValues);
     FF_UWP_API void FF_minus(double gain);
     FF_UWP_API void FF_plus(double gain);

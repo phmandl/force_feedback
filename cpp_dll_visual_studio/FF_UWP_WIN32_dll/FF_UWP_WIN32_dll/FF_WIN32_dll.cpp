@@ -56,7 +56,7 @@ bool initRacingWheel()
 
 }
 
-int initForceFeedback(int samplingTime) {
+int initForceFeedback(int64 samplingTime) {
     TimeSpan time;
     time.Duration = samplingTime; // samplingtime is in 100 ns Ticks --> Ts*1e7 Ticks
 
