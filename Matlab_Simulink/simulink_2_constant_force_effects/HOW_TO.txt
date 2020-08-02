@@ -1,5 +1,0 @@
-Files required to run the simulink model:
-1) FF_UWP_WIN32_dll.dll - My compiled dynamic link library
-2) FF_UWP_WIN32_dll.h - Header file for function definitions (see Microsoft docu)
-3) RacingWheel.mexw64 - Matlab compiled .mex file to execute in simulink
-4) Icon.png - MOST IMPORTANT FILE DON'T REMOVE :P

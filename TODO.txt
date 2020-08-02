@@ -1,0 +1,3 @@
+- Thrustmaster integration
+- Tryout indentification with the new model and simulation pacing
+- tryout another way with springs / damper / intertia to control the wheel
