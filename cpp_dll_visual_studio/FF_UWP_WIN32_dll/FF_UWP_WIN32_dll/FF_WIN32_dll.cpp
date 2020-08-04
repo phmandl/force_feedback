@@ -56,9 +56,10 @@ bool initRacingWheel()
 
 }
 
-int initForceFeedback(int64 samplingTime) {
+int initForceFeedback() {
     TimeSpan time;
-    time.Duration = samplingTime; // samplingtime is in 100 ns Ticks --> Ts*1e7 Ticks
+    time.Duration = 1e5*1e7; // samplingtime is in 100 ns Ticks --> Duration*1e7 Ticks
+    // Duration of the Effect is set to be 1e5 seconds --> 27.7778h
 
     effect_minus = ref new ForceFeedback::ConstantForceEffect();
     effect_plus = ref new ForceFeedback::ConstantForceEffect();
