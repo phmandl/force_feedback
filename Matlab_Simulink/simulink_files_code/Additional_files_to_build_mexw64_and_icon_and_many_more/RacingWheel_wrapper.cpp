@@ -42,7 +42,6 @@ void RacingWheel_Start_wrapper(const real_T *Ts_FF, const int_T p_width0)
 
 initRacingWheel();
 initForceFeedback(); // effect is active for approx. 27.7 hours
-
 /* %%%-SFUNWIZ_wrapper_Start_Changes_END --- EDIT HERE TO _BEGIN */
 }
 /*
