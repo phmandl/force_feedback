@@ -119,7 +119,7 @@
       <AdditionalUsingDirectories>$(VCIDEInstallDir)vcpackages;$(WindowsSDKDir)UnionMetadata\10.0.18362.0;$(WindowsSDKDir)References\10.0.18362.0\Windows.Foundation.UniversalApiContract\8.0.0.0;$(WindowsSDKDir)References\10.0.18362.0\Windows.Foundation.FoundationContract\3.0.0.0;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
       <CompileAsWinRT>true</CompileAsWinRT>
       <AdditionalOptions>/Zc:twoPhase- /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>D:\Philipp\repos\uwp_force_feedback\FF_UWP_WIN32_dll\FF_UWP_WIN32_dll</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mandl\repos\uwp_force_feedback\cpp_dll_visual_studio\FF_UWP_WIN32_dll\FF_UWP_WIN32_dll</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,7 +128,7 @@
       <AdditionalDependencies>FF_UWP_WIN32_dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "D:\Philipp\repos\uwp_force_feedback\FF_UWP_WIN32_dll\x64\Debug\FF_UWP_WIN32_dll.dll" "$(OutDir)"</Command>
+      <Command>xcopy /y /d "C:\Users\mandl\repos\uwp_force_feedback\cpp_dll_visual_studio\FF_UWP_WIN32_dll\x64\Debug" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

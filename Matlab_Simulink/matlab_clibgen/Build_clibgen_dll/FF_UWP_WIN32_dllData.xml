@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/cxxfe_ast/R2019a_20180726 http://schema.mathworks.com/mf0/cxxfe_ast_annotations/20180710">
+  <cxxfe.ast.Project type="cxxfe.ast.Project" uuid="148ab976-d1f3-4d1e-841a-cee9cfc114a6">
+    <Compilations type="cxxfe.ast.source.CompilationUnit" uuid="291d35d4-6efa-4a50-8f22-24665d585c88">
+      <Files type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+      <Language>CXX</Language>
+      <Annotations type="mwAnnotation.AbsolutePathBuildInfo" uuid="7bec0731-fb00-4c39-923c-a236f556a83e">
+        <headers>C:\Users\mandl\repos\uwp_force_feedback\Matlab_Simulink\matlab_clibgen\Build_clibgen_dll\FF_UWP_WIN32_dll.h</headers>
+        <libraries>FF_UWP_WIN32_dll.lib</libraries>
+        <location>C:\Users\mandl\repos\uwp_force_feedback\Matlab_Simulink\matlab_clibgen\Build_clibgen_dll</location>
+        <libData type="mwAnnotation.LibraryAnnotation" uuid="6da7b396-051d-442b-bf62-62c7004bf5ce">
+          <architecture>win64</architecture>
+          <matlabVersion>R2019b</matlabVersion>
+          <packageName>FF_UWP_WIN32_dll</packageName>
+        </libData>
+      </Annotations>
+      <Namespaces type="cxxfe.ast.Namespace" uuid="2a0d5b6b-6851-42e8-968e-d6a84f77dab7">
+        <IsStd>true</IsStd>
+        <Name>std</Name>
+        <Symbols type="cxxfe.ast.types.ClassType" uuid="55549232-a503-46bf-a537-6ffb2cfd1453">
+          <Linkage>ExternalCXX</Linkage>
+          <NeedsImplicitConstructor>true</NeedsImplicitConstructor>
+          <NeedsImplicitCopyConstructor>true</NeedsImplicitCopyConstructor>
+          <IsIncomplete>true</IsIncomplete>
+          <Name>type_info</Name>
+        </Symbols>
+      </Namespaces>
+      <Namespaces type="cxxfe.ast.Namespace" uuid="41a58b80-b6eb-4f3a-9671-e8bd3a16f3e0">
+        <Name>__cxxabiv1</Name>
+        <Annotations type="mwAnnotation.ScopeAnnotation" uuid="a626781a-ba73-4e4f-b37d-6d6ffa7c60ad">
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="290394c7-4a4d-48b1-b3e2-a01a8084576d">
+            <definitionStatus>Unsupported</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+      </Namespaces>
+      <Symbols type="cxxfe.ast.types.FloatType" uuid="6dfe1529-6215-458d-91d9-ca53873bf47a">
+        <Kind>LongDouble</Kind>
+        <NumBits>128</NumBits>
+        <Name>long double</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.TypedefType" uuid="d58e2afb-0425-4ee5-887c-492cba5ad5cb">
+        <Type type="cxxfe.ast.types.FloatType" uuid="6dfe1529-6215-458d-91d9-ca53873bf47a"/>
+        <Name>__float80</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FloatType" uuid="4822c8e8-2bae-4ad0-890b-b3666fce3e1f">
+        <Kind>Float128</Kind>
+        <NumBits>128</NumBits>
+        <Name>__float128</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.TypedefType" uuid="a27193d2-2792-47f1-9837-fd005c465084">
+        <Type type="cxxfe.ast.types.FloatType" uuid="4822c8e8-2bae-4ad0-890b-b3666fce3e1f"/>
+        <Name>__float128</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.IntegerType" uuid="7b3bb403-1534-4fac-9b68-408931e365f5">
+        <IsSigned>false</IsSigned>
+        <Kind>UnsignedInt</Kind>
+        <NumBits>32</NumBits>
+        <Name>unsigned int</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88">
+        <Name>void</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126">
+        <Type type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.LValueReferenceType" uuid="1bb7ef8a-a528-438a-99ee-5ae2e3d9a722">
+        <Type type="cxxfe.ast.types.StructType" uuid="b3dcf9b7-4d96-4f62-84ef-62b6e240c727"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.QualifiedType" uuid="f9daef5f-89aa-4bfb-b137-e67538d49885">
+        <IsConst>true</IsConst>
+        <Type type="cxxfe.ast.types.StructType" uuid="b3dcf9b7-4d96-4f62-84ef-62b6e240c727"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.LValueReferenceType" uuid="ada53f8d-58f9-48c6-baff-67c983785b95">
+        <Type type="cxxfe.ast.types.QualifiedType" uuid="f9daef5f-89aa-4bfb-b137-e67538d49885"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="8ca0d9ce-ee9f-4127-9280-74456f09c8f4">
+        <ParamTypes type="cxxfe.ast.types.LValueReferenceType" uuid="ada53f8d-58f9-48c6-baff-67c983785b95"/>
+        <RetType type="cxxfe.ast.types.LValueReferenceType" uuid="1bb7ef8a-a528-438a-99ee-5ae2e3d9a722"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.RValueReferenceType" uuid="887d657f-ef14-44b2-873a-9ebe88102525">
+        <Type type="cxxfe.ast.types.StructType" uuid="b3dcf9b7-4d96-4f62-84ef-62b6e240c727"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="72d7abd1-afeb-4ae4-a90d-9c883e20eb37">
+        <ParamTypes type="cxxfe.ast.types.RValueReferenceType" uuid="887d657f-ef14-44b2-873a-9ebe88102525"/>
+        <RetType type="cxxfe.ast.types.LValueReferenceType" uuid="1bb7ef8a-a528-438a-99ee-5ae2e3d9a722"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.StructType" uuid="b3dcf9b7-4d96-4f62-84ef-62b6e240c727">
+        <Annotations type="mwAnnotation.ClassAnnotation" uuid="52dbd696-1a04-4b88-8dc9-f4a41ce8c732">
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="b30140fd-ecf6-4fbc-92fa-84a42a48ab5a">
+            <definitionStatus>Inaccessible</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+        <Linkage>ExternalCXX</Linkage>
+        <Methods type="cxxfe.ast.types.Method" uuid="144f8ab3-cea3-4a4a-948d-aa0a10fd5b42">
+          <IsCompilerGenerated>true</IsCompilerGenerated>
+          <IsInline>true</IsInline>
+          <Params type="cxxfe.ast.Variable" uuid="5d962873-6771-4154-9178-b750c3df77f3">
+            <Type type="cxxfe.ast.types.LValueReferenceType" uuid="ada53f8d-58f9-48c6-baff-67c983785b95"/>
+          </Params>
+          <SpecialKind>Operator</SpecialKind>
+          <Linkage>ExternalCXX</Linkage>
+          <Type type="cxxfe.ast.types.FunctionType" uuid="8ca0d9ce-ee9f-4127-9280-74456f09c8f4"/>
+          <Name>operator=</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="f7574df8-90fc-41fc-907f-b744c32ad7c8"/>
+        </Methods>
+        <Methods type="cxxfe.ast.types.Method" uuid="f805d622-244e-433e-98e9-69dfc5785d9e">
+          <IsCompilerGenerated>true</IsCompilerGenerated>
+          <IsInline>true</IsInline>
+          <Params type="cxxfe.ast.Variable" uuid="76c2a3fa-049d-41d8-a781-d53c49f5d053">
+            <Type type="cxxfe.ast.types.RValueReferenceType" uuid="887d657f-ef14-44b2-873a-9ebe88102525"/>
+          </Params>
+          <SpecialKind>Operator</SpecialKind>
+          <Linkage>ExternalCXX</Linkage>
+          <Type type="cxxfe.ast.types.FunctionType" uuid="72d7abd1-afeb-4ae4-a90d-9c883e20eb37"/>
+          <Name>operator=</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="483ba8cc-15b4-4ab1-820c-180dfe7e6ece"/>
+        </Methods>
+        <NeedsImplicitConstructor>true</NeedsImplicitConstructor>
+        <NeedsImplicitCopyConstructor>true</NeedsImplicitCopyConstructor>
+        <Members type="cxxfe.ast.types.Member" uuid="c2eee213-aacf-4d11-bbe8-3996e6441e7c">
+          <Access>Public</Access>
+          <Type type="cxxfe.ast.types.IntegerType" uuid="7b3bb403-1534-4fac-9b68-408931e365f5"/>
+          <Name>gp_offset</Name>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="0b52f53b-6310-4d21-8d90-fc8e205e7f9d">
+          <Access>Public</Access>
+          <Type type="cxxfe.ast.types.IntegerType" uuid="7b3bb403-1534-4fac-9b68-408931e365f5"/>
+          <Name>fp_offset</Name>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="59194414-c2e5-4669-b1ea-de5a16af01c6">
+          <Access>Public</Access>
+          <Type type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126"/>
+          <Name>overflow_arg_area</Name>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="c37d211e-7311-43b4-9f0d-4c6697aaa292">
+          <Access>Public</Access>
+          <Type type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126"/>
+          <Name>reg_save_area</Name>
+        </Members>
+        <Name>__va_list_tag</Name>
+        <Scope type="cxxfe.ast.Scope" uuid="7de3e9ab-185b-4240-a398-7b01b2d6bb05">
+          <Annotations type="mwAnnotation.ScopeAnnotation" uuid="7110e7f3-5a93-447e-89e1-d944d2d3d816">
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="12618eb9-25ef-49ff-ac17-793c3ca03de3">
+              <definitionStatus>Inaccessible</definitionStatus>
+            </integrationStatus>
+          </Annotations>
+        </Scope>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.ArrayType" uuid="7c643a4b-93af-4f3b-9e14-3edd431fe8d2">
+        <Dimensions>1</Dimensions>
+        <Type type="cxxfe.ast.types.StructType" uuid="b3dcf9b7-4d96-4f62-84ef-62b6e240c727"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.TypedefType" uuid="d833c2cb-0dae-44e3-b987-507cd7921eb2">
+        <Type type="cxxfe.ast.types.ArrayType" uuid="7c643a4b-93af-4f3b-9e14-3edd431fe8d2"/>
+        <Name>__builtin_va_list</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.IntegerType" uuid="f3e4074d-366c-42b6-ad2c-5fc437f54705">
+        <Kind>SignedInt128</Kind>
+        <NumBits>128</NumBits>
+        <Name>__int128_t</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.TypedefType" uuid="257532d9-1db2-4da4-b890-9c45d0b1faf2">
+        <Type type="cxxfe.ast.types.IntegerType" uuid="f3e4074d-366c-42b6-ad2c-5fc437f54705"/>
+        <Name>__int128_t</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.IntegerType" uuid="c0f100a8-702f-4a75-93c0-52dbb779c26c">
+        <IsSigned>false</IsSigned>
+        <Kind>UnsignedInt128</Kind>
+        <NumBits>128</NumBits>
+        <Name>__uint128_t</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.TypedefType" uuid="792c4896-bb37-4baf-88fc-e24925cbbf3d">
+        <Type type="cxxfe.ast.types.IntegerType" uuid="c0f100a8-702f-4a75-93c0-52dbb779c26c"/>
+        <Name>__uint128_t</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.StructType" uuid="84ac5143-3759-4609-a7a9-48a0f62cf8b5">
+        <Annotations type="mwAnnotation.ClassAnnotation" uuid="13fb44d8-3a01-4fb4-85ce-37aeba31ee60">
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="d6b4f9e0-3463-402d-b63b-4d1ce1504c6f">
+            <definitionStatus>Inaccessible</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+        <Linkage>ExternalCXX</Linkage>
+        <NeedsImplicitConstructor>true</NeedsImplicitConstructor>
+        <NeedsImplicitCopyConstructor>true</NeedsImplicitCopyConstructor>
+        <IsIncomplete>true</IsIncomplete>
+        <Name>_IO_FILE</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540">
+        <Kind>Double</Kind>
+        <NumBits>64</NumBits>
+        <Name>double</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.IntegerType" uuid="e43e78bd-5e64-4a80-a21e-8141697d584d">
+        <IsSigned>false</IsSigned>
+        <Kind>UnsignedLongLong</Kind>
+        <NumBits>64</NumBits>
+        <Name>unsigned long long</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.LValueReferenceType" uuid="e1baad95-2796-47a8-aef0-928055efe1e8">
+        <Type type="cxxfe.ast.types.StructType" uuid="e17c36cb-1300-41e0-83bb-8c8a0acca1ce"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.QualifiedType" uuid="c136354a-342d-40cd-a123-3f23070d4af6">
+        <IsConst>true</IsConst>
+        <Type type="cxxfe.ast.types.StructType" uuid="e17c36cb-1300-41e0-83bb-8c8a0acca1ce"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.LValueReferenceType" uuid="9bdceda5-87d7-439b-b95b-e912e6b9aa76">
+        <Type type="cxxfe.ast.types.QualifiedType" uuid="c136354a-342d-40cd-a123-3f23070d4af6"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="f355cb58-a460-436f-87a8-92dade629de7">
+        <ParamTypes type="cxxfe.ast.types.LValueReferenceType" uuid="9bdceda5-87d7-439b-b95b-e912e6b9aa76"/>
+        <RetType type="cxxfe.ast.types.LValueReferenceType" uuid="e1baad95-2796-47a8-aef0-928055efe1e8"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.RValueReferenceType" uuid="d58e5fb7-533f-4945-b254-0b2834c8a9a8">
+        <Type type="cxxfe.ast.types.StructType" uuid="e17c36cb-1300-41e0-83bb-8c8a0acca1ce"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="87c45ede-d4fd-49dc-a9df-9d96155420e8">
+        <ParamTypes type="cxxfe.ast.types.RValueReferenceType" uuid="d58e5fb7-533f-4945-b254-0b2834c8a9a8"/>
+        <RetType type="cxxfe.ast.types.LValueReferenceType" uuid="e1baad95-2796-47a8-aef0-928055efe1e8"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.StructType" uuid="e17c36cb-1300-41e0-83bb-8c8a0acca1ce">
+        <Annotations type="mwAnnotation.ClassAnnotation" uuid="eff5e499-7a4e-48be-aaf0-dcd77bb93ae8">
+          <deallocatorPTKey>D/wheelreadings</deallocatorPTKey>
+          <description>clib.FF_UWP_WIN32_dll.WheelReadings    Representation of C++ class wheelreadings</description>
+          <implicitConstructors type="mwAnnotation.FunctionAnnotation" uuid="c96f027d-1e8a-458d-8df4-7c796b0e0ffe">
+            <cppSignature>wheelreadings::wheelreadings()</cppSignature>
+            <description>clib.FF_UWP_WIN32_dll.WheelReadings    Constructor of C++ class wheelreadings</description>
+            <name>wheelreadings</name>
+            <ptKey>A/wheelreadings</ptKey>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="26a43183-d843-4193-a95a-289d316ccb22"/>
+          </implicitConstructors>
+          <implicitConstructors type="mwAnnotation.FunctionAnnotation" uuid="3539fe44-79ae-4a34-8dea-94638defb276">
+            <cppSignature>wheelreadings::wheelreadings(wheelreadings const &amp; input1)</cppSignature>
+            <description>clib.FF_UWP_WIN32_dll.WheelReadings    Constructor of C++ class wheelreadings</description>
+            <inputs type="mwAnnotation.Argument" uuid="a13d4492-1517-42f4-a4bc-fbaaeeddfd35">
+              <cppPosition>1</cppPosition>
+              <cppType>[wheelreadings]ConstRef</cppType>
+              <isConstData>true</isConstData>
+              <mwType>clib.FF_UWP_WIN32_dll.WheelReadings</mwType>
+              <name>input1</name>
+              <validTypes>clib.FF_UWP_WIN32_dll.WheelReadings</validTypes>
+            </inputs>
+            <name>wheelreadings</name>
+            <ptKey>A/wheelreadings@[wheelreadings]ConstRef</ptKey>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="878bc00b-c4db-4d49-a777-da81914e328b"/>
+          </implicitConstructors>
+          <isDestructible>true</isDestructible>
+          <name>clib.FF_UWP_WIN32_dll.WheelReadings</name>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="ad572acb-8759-41c0-9ccb-59da3cb45966"/>
+        </Annotations>
+        <Linkage>ExternalCXX</Linkage>
+        <Methods type="cxxfe.ast.types.Method" uuid="bfbb2105-8b1a-4979-a11d-515ebedcd125">
+          <Annotations type="mwAnnotation.FunctionAnnotation" uuid="e3d46000-2411-427a-9c5a-bbae2926facb">
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="13988d57-4a90-4c25-be13-9938356c0ea0">
+              <definitionStatus>Inaccessible</definitionStatus>
+            </integrationStatus>
+          </Annotations>
+          <IsCompilerGenerated>true</IsCompilerGenerated>
+          <IsInline>true</IsInline>
+          <Params type="cxxfe.ast.Variable" uuid="684f8a3a-45c7-4483-a3cf-824870a591fd">
+            <Type type="cxxfe.ast.types.LValueReferenceType" uuid="9bdceda5-87d7-439b-b95b-e912e6b9aa76"/>
+          </Params>
+          <SpecialKind>Operator</SpecialKind>
+          <Linkage>ExternalCXX</Linkage>
+          <Type type="cxxfe.ast.types.FunctionType" uuid="f355cb58-a460-436f-87a8-92dade629de7"/>
+          <Name>operator=</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="68297c49-96ed-44a8-b2ea-ec9563c8ea6e">
+            <Col>20</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>11</Line>
+          </DefPos>
+        </Methods>
+        <Methods type="cxxfe.ast.types.Method" uuid="72f4382c-27ba-499c-a17a-9011e51d55c2">
+          <Annotations type="mwAnnotation.FunctionAnnotation" uuid="7ac1abd4-986a-48e0-bf44-315eeb000c7d">
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="d650da96-61b2-4dbb-8d9b-5911827ecaed">
+              <definitionStatus>Inaccessible</definitionStatus>
+            </integrationStatus>
+          </Annotations>
+          <IsCompilerGenerated>true</IsCompilerGenerated>
+          <IsInline>true</IsInline>
+          <Params type="cxxfe.ast.Variable" uuid="9fdf6093-3391-4b0b-a76a-5988b90cd054">
+            <Type type="cxxfe.ast.types.RValueReferenceType" uuid="d58e5fb7-533f-4945-b254-0b2834c8a9a8"/>
+          </Params>
+          <SpecialKind>Operator</SpecialKind>
+          <Linkage>ExternalCXX</Linkage>
+          <Type type="cxxfe.ast.types.FunctionType" uuid="87c45ede-d4fd-49dc-a9df-9d96155420e8"/>
+          <Name>operator=</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="63a73d40-71e4-4db3-acb0-71651d7ba7af">
+            <Col>20</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>11</Line>
+          </DefPos>
+        </Methods>
+        <NeedsImplicitConstructor>true</NeedsImplicitConstructor>
+        <NeedsImplicitCopyConstructor>true</NeedsImplicitCopyConstructor>
+        <Members type="cxxfe.ast.types.Member" uuid="e97a5e31-1ceb-4b96-bd80-38f07f0837b7">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="30682e2f-d83e-4df2-a4ac-8d1f67a92e34">
+            <cppSignature>double wheelreadings::throttle</cppSignature>
+            <cppType>[double]</cppType>
+            <description>double    Data member of C++ class wheelreadings</description>
+            <getterPTKey>DM/?get/wheelreadings/throttle</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>double</mwType>
+            <setterPTKey>DM/?set/wheelreadings/throttle</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="4f6e7388-1cb4-4864-9a88-5af04880c764"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+          <Name>throttle</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="755608cf-b1a6-45bf-a548-a8dbefa0e2e3">
+            <Col>16</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>12</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="660e4a01-6c2f-4747-8586-375f287a2778">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="f44c3da3-5d70-487c-9440-09c507405dec">
+            <cppSignature>double wheelreadings::brake</cppSignature>
+            <cppType>[double]</cppType>
+            <description>double    Data member of C++ class wheelreadings</description>
+            <getterPTKey>DM/?get/wheelreadings/brake</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>double</mwType>
+            <setterPTKey>DM/?set/wheelreadings/brake</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="38cc69bc-9a99-48f7-9c14-cb5638b6fed3"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+          <Name>brake</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="ea111cd1-2071-400d-a1c3-5167df171d01">
+            <Col>16</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>13</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="73908ea0-eb3b-4d61-801e-86a8d9486711">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="f17e255e-560c-47a1-a2f2-77e02d719194">
+            <cppSignature>double wheelreadings::clutch</cppSignature>
+            <cppType>[double]</cppType>
+            <description>double    Data member of C++ class wheelreadings</description>
+            <getterPTKey>DM/?get/wheelreadings/clutch</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>double</mwType>
+            <setterPTKey>DM/?set/wheelreadings/clutch</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="e4657073-0bf4-482f-aac1-a20c192b0ec3"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+          <Name>clutch</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="0285ca7c-d2e9-4403-ab99-27e14868a013">
+            <Col>16</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>14</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="170d2acb-4345-44a9-8105-356053ac7963">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="7dc94577-c086-4d51-9737-e750a997d978">
+            <cppSignature>double wheelreadings::angle</cppSignature>
+            <cppType>[double]</cppType>
+            <description>double    Data member of C++ class wheelreadings</description>
+            <getterPTKey>DM/?get/wheelreadings/angle</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>double</mwType>
+            <setterPTKey>DM/?set/wheelreadings/angle</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="89851233-16f8-433d-b935-c851b152b510"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+          <Name>angle</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="60bea954-14c9-4e6c-9215-487e5523a62f">
+            <Col>16</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>15</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="f9d5f356-468b-4dba-b758-18d75b22786b">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="5d987829-9c92-471a-ba02-15c4df6fd4e1">
+            <cppSignature>double wheelreadings::mastergain</cppSignature>
+            <cppType>[double]</cppType>
+            <description>double    Data member of C++ class wheelreadings</description>
+            <getterPTKey>DM/?get/wheelreadings/mastergain</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>double</mwType>
+            <setterPTKey>DM/?set/wheelreadings/mastergain</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="85f960fe-e617-489b-97e2-b6b4fd9d2fcd"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+          <Name>mastergain</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="36889246-1afd-44f1-90a2-9800f3ee9786">
+            <Col>16</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>16</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="8d66f4c8-0386-46d0-a0e3-ad906370a670">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="205ccf17-1ca1-4a51-87cf-a513bccc8a06">
+            <cppSignature>unsigned long long wheelreadings::timestamp</cppSignature>
+            <cppType>[unsigned long long]</cppType>
+            <description>uint64    Data member of C++ class wheelreadings</description>
+            <getterPTKey>DM/?get/wheelreadings/timestamp</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>uint64</mwType>
+            <setterPTKey>DM/?set/wheelreadings/timestamp</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="6800ecd3-1d01-413f-bb15-1ef96171ba5a"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.IntegerType" uuid="e43e78bd-5e64-4a80-a21e-8141697d584d"/>
+          <Name>timestamp</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="967bfb5c-92d6-4051-9ef5-25ce52bc7f27">
+            <Col>28</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>17</Line>
+          </DefPos>
+        </Members>
+        <Name>wheelreadings</Name>
+        <Scope type="cxxfe.ast.Scope" uuid="03e6ebe7-53d2-4f95-bd12-a38330d4dd14">
+          <Annotations type="mwAnnotation.ScopeAnnotation" uuid="ad4de15c-eab0-4077-8a86-8f1cabf4af15">
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="41ff94e7-b4b9-4448-8db0-7eb5ff8979e0"/>
+          </Annotations>
+        </Scope>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="f373c196-0422-497c-846c-0cf480c91eef">
+          <Col>20</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>11</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.TypedefType" uuid="97bd3229-5aa3-4f67-a348-70aa39fbf9d0">
+        <Type type="cxxfe.ast.types.StructType" uuid="e17c36cb-1300-41e0-83bb-8c8a0acca1ce"/>
+        <Name>WheelReadings</Name>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="e2cec288-42b1-4bdc-903a-3c7c1c4243d9">
+          <Col>7</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>18</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+      <Symbols type="cxxfe.ast.types.LValueReferenceType" uuid="b007c61f-a7bf-41f8-b76c-3b295b8417de">
+        <Type type="cxxfe.ast.types.StructType" uuid="0418bc62-4f71-4cbb-9c9b-ef178eca6c63"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.QualifiedType" uuid="22955389-6ea4-4565-9711-39d1cb6dbc5f">
+        <IsConst>true</IsConst>
+        <Type type="cxxfe.ast.types.StructType" uuid="0418bc62-4f71-4cbb-9c9b-ef178eca6c63"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.LValueReferenceType" uuid="e871f127-8620-48e8-9254-0536794b4ad3">
+        <Type type="cxxfe.ast.types.QualifiedType" uuid="22955389-6ea4-4565-9711-39d1cb6dbc5f"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="ac4863a7-2695-4fd2-9139-b53e008f9922">
+        <ParamTypes type="cxxfe.ast.types.LValueReferenceType" uuid="e871f127-8620-48e8-9254-0536794b4ad3"/>
+        <RetType type="cxxfe.ast.types.LValueReferenceType" uuid="b007c61f-a7bf-41f8-b76c-3b295b8417de"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.RValueReferenceType" uuid="190be752-c8d6-4f64-bb69-2848ca60bddb">
+        <Type type="cxxfe.ast.types.StructType" uuid="0418bc62-4f71-4cbb-9c9b-ef178eca6c63"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="3ffe7fa9-4838-4b0e-9262-d197af38c664">
+        <ParamTypes type="cxxfe.ast.types.RValueReferenceType" uuid="190be752-c8d6-4f64-bb69-2848ca60bddb"/>
+        <RetType type="cxxfe.ast.types.LValueReferenceType" uuid="b007c61f-a7bf-41f8-b76c-3b295b8417de"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.StructType" uuid="0418bc62-4f71-4cbb-9c9b-ef178eca6c63">
+        <Annotations type="mwAnnotation.ClassAnnotation" uuid="3389b5e7-e477-4098-821d-1875208c81c1">
+          <deallocatorPTKey>D/buttonReadings</deallocatorPTKey>
+          <description>clib.FF_UWP_WIN32_dll.buttonReadings    Representation of C++ class buttonReadings</description>
+          <implicitConstructors type="mwAnnotation.FunctionAnnotation" uuid="6d970024-df74-40e4-aab4-aa85157590c8">
+            <cppSignature>buttonReadings::buttonReadings()</cppSignature>
+            <description>clib.FF_UWP_WIN32_dll.buttonReadings    Constructor of C++ class buttonReadings</description>
+            <name>buttonReadings</name>
+            <ptKey>A/buttonReadings</ptKey>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="3fbc2887-0e14-4a01-b8a9-5333fd8c6167"/>
+          </implicitConstructors>
+          <implicitConstructors type="mwAnnotation.FunctionAnnotation" uuid="38af48be-d036-43c2-9c19-f242a53284b4">
+            <cppSignature>buttonReadings::buttonReadings(buttonReadings const &amp; input1)</cppSignature>
+            <description>clib.FF_UWP_WIN32_dll.buttonReadings    Constructor of C++ class buttonReadings</description>
+            <inputs type="mwAnnotation.Argument" uuid="63686d45-b56b-4514-817b-25cc77d2f3d5">
+              <cppPosition>1</cppPosition>
+              <cppType>[buttonReadings]ConstRef</cppType>
+              <isConstData>true</isConstData>
+              <mwType>clib.FF_UWP_WIN32_dll.buttonReadings</mwType>
+              <name>input1</name>
+              <validTypes>clib.FF_UWP_WIN32_dll.buttonReadings</validTypes>
+            </inputs>
+            <name>buttonReadings</name>
+            <ptKey>A/buttonReadings@[buttonReadings]ConstRef</ptKey>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="05b7e172-42ce-474b-a1bb-cbe4faebe536"/>
+          </implicitConstructors>
+          <isDestructible>true</isDestructible>
+          <name>clib.FF_UWP_WIN32_dll.buttonReadings</name>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="a8c6d1c6-3868-4cea-90a8-67612ee9e9c9"/>
+        </Annotations>
+        <Linkage>ExternalCXX</Linkage>
+        <Methods type="cxxfe.ast.types.Method" uuid="124ccc6d-bed9-4d02-98fa-14d487435ce3">
+          <Annotations type="mwAnnotation.FunctionAnnotation" uuid="701d826f-abe1-4533-bb8a-71c08a5c635d">
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="b732cf5c-5470-4940-b55d-36fa31649929">
+              <definitionStatus>Inaccessible</definitionStatus>
+            </integrationStatus>
+          </Annotations>
+          <IsCompilerGenerated>true</IsCompilerGenerated>
+          <IsInline>true</IsInline>
+          <Params type="cxxfe.ast.Variable" uuid="2c22fa60-6a01-4c21-8522-2d5c0c8644c5">
+            <Type type="cxxfe.ast.types.LValueReferenceType" uuid="e871f127-8620-48e8-9254-0536794b4ad3"/>
+          </Params>
+          <SpecialKind>Operator</SpecialKind>
+          <Linkage>ExternalCXX</Linkage>
+          <Type type="cxxfe.ast.types.FunctionType" uuid="ac4863a7-2695-4fd2-9139-b53e008f9922"/>
+          <Name>operator=</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="29075ec7-8a6c-4770-8e03-33300a957628">
+            <Col>20</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>20</Line>
+          </DefPos>
+        </Methods>
+        <Methods type="cxxfe.ast.types.Method" uuid="be381b06-0311-4bfa-b153-c41470af9d92">
+          <Annotations type="mwAnnotation.FunctionAnnotation" uuid="a61136b3-c292-4d80-a4a4-f1db3615340a">
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="90e51e95-b42f-4a42-8fe8-dd803838dc56">
+              <definitionStatus>Inaccessible</definitionStatus>
+            </integrationStatus>
+          </Annotations>
+          <IsCompilerGenerated>true</IsCompilerGenerated>
+          <IsInline>true</IsInline>
+          <Params type="cxxfe.ast.Variable" uuid="612f17f9-48d7-4ba4-8bc2-80c291b64ccb">
+            <Type type="cxxfe.ast.types.RValueReferenceType" uuid="190be752-c8d6-4f64-bb69-2848ca60bddb"/>
+          </Params>
+          <SpecialKind>Operator</SpecialKind>
+          <Linkage>ExternalCXX</Linkage>
+          <Type type="cxxfe.ast.types.FunctionType" uuid="3ffe7fa9-4838-4b0e-9262-d197af38c664"/>
+          <Name>operator=</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="ec61594f-ec38-40ca-bd0f-228c354edbcb">
+            <Col>20</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>20</Line>
+          </DefPos>
+        </Methods>
+        <NeedsImplicitConstructor>true</NeedsImplicitConstructor>
+        <NeedsImplicitCopyConstructor>true</NeedsImplicitCopyConstructor>
+        <Members type="cxxfe.ast.types.Member" uuid="b6e6248a-3006-4672-9789-7da25268f63e">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="c86ab7f9-0b69-4281-af15-f8dcc187b950">
+            <cppSignature>bool buttonReadings::gearup</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/gearup</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/gearup</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="d002bc5c-03df-4fdd-91ae-b883ec741eb1"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>gearup</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="86e7d177-2b27-4128-ac98-c96d1334d8be">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>21</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="eedb3b86-2862-45c9-b198-84585dfa9ad1">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="0a656599-8c74-4bfc-a66f-0a0b1d6becf4">
+            <cppSignature>bool buttonReadings::geardown</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/geardown</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/geardown</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="04493c35-6d03-43ce-8a4d-88d4e0d5d7dd"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>geardown</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="e181b99e-3556-4f4b-9146-c435898d9fa3">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>22</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="bcc616a6-306e-457a-b75f-6254ec532d1b">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="ade47a7d-1f79-46dd-9cfb-8381833d69df">
+            <cppSignature>bool buttonReadings::ST</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/ST</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/ST</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="8d4a2ab5-317d-44e5-8f11-555e9531701e"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>ST</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="4311dfc4-370d-499e-ac01-65269a750358">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>23</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="2a18b4fe-7467-488b-87a2-637f74de6470">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="b320aa22-398c-4c72-9bea-2af2955b8304">
+            <cppSignature>bool buttonReadings::SE</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/SE</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/SE</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="4165eb5e-8270-4385-9cc6-908751ab20e2"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>SE</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="da162dd3-a14d-4733-a31b-6d891d70768f">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>24</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="383379c5-1b9b-49a0-9496-7418b80e5db1">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="6a8f0455-a0fb-4945-ab3f-d64602db1cab">
+            <cppSignature>bool buttonReadings::X</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/X</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/X</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="eba7a52b-a067-4cf0-abc5-71148ea44d9c"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>X</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="79879cbf-6551-4d21-a7a0-e75c6376efa3">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>25</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="4935f66c-e3ec-4227-a206-a138bcb622d2">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="1825e051-cd8d-4a39-a43a-bb1249bcdcaf">
+            <cppSignature>bool buttonReadings::O</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/O</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/O</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="a74df039-dfc0-4bb5-91cb-41ee30cf5afa"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>O</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="1d4c1dc4-cadb-4a0b-82e6-a8f4d475e9da">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>26</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="4f252f89-e71d-424e-a219-434c9e8e6037">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="88407bdb-eba0-4d59-a4dc-c9fbf90c2d27">
+            <cppSignature>bool buttonReadings::Square</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/Square</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/Square</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="b58e6070-0a02-4357-b68f-22ff1929680d"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>Square</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="f552634b-d777-4860-9051-ea5050f5e10e">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>27</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="cd7c3bc7-3aca-4888-a2fc-1003ac138e6b">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="00de8c74-2019-41d3-a2b7-8a5502828f73">
+            <cppSignature>bool buttonReadings::Triangle</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/Triangle</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/Triangle</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="022b673b-d886-4aeb-b9ed-50113b380b00"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>Triangle</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="71fde2ee-9bb7-4e60-96e9-542c4ed0a5c6">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>28</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="576adc56-bbc6-4a61-a2cb-451ac253dc07">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="a9cef5a0-dfec-4a09-8812-120f50e064a4">
+            <cppSignature>bool buttonReadings::L2</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/L2</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/L2</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="baa1ac75-a3ba-4cdc-a07f-e943c621e513"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>L2</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="d24fffaa-a35e-48de-b806-5d3b746de5f4">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>29</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="64902cbf-a201-42f5-82a3-c5b70bd2c2bc">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="14a4d366-17ca-4e94-a04f-eb1edd7b9a3c">
+            <cppSignature>bool buttonReadings::R2</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/R2</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/R2</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="49367abe-146c-4457-8adc-aa2b9d02bd7f"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>R2</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="de1713c1-82db-4b5a-892f-5b74286f52cc">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>30</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="f94ae37c-97d3-49b1-962f-3e6b3435da63">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="e85b7e60-bc99-476b-8ed5-2e55959c59c6">
+            <cppSignature>bool buttonReadings::L3</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/L3</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/L3</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="210b473b-1702-4f9f-9e76-fd1834f89be4"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>L3</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="f6a1b356-33c6-4850-82f3-7379355a670e">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>31</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="a399949c-1a4b-4f87-90e6-e3de9e088a8e">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="da3a6fe8-9257-4f4e-8904-1449849575df">
+            <cppSignature>bool buttonReadings::R3</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/R3</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/R3</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="30686ae6-0cb2-4db3-8de9-f4d02a65de29"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>R3</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="a93e69b1-efd0-49c0-9c71-a43c56b4c710">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>32</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="b923c59c-b8a7-43a2-9139-ede3c8c2a4bf">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="0d5995bf-317e-4bde-89c2-e58f9382f6a4">
+            <cppSignature>bool buttonReadings::DPadDown</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/DPadDown</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/DPadDown</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="524b3337-4a5b-46cd-a36e-799c8e94149a"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>DPadDown</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="488a8e38-85ee-40f6-b52f-6d85b06e5c10">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>33</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="ffbb4558-0d3b-4747-b7ad-71e58ef570a7">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="999fce24-8f52-4386-90ec-49635f2bf8ad">
+            <cppSignature>bool buttonReadings::DPadUp</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/DPadUp</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/DPadUp</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="ce778022-3738-4fd4-b988-429d63cba194"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>DPadUp</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="181ce0a5-edd0-4af0-a8b4-fc7ca4d4797d">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>34</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="79251f70-0085-4cac-a42b-61853f5f1d8a">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="453bcfd5-ec53-484d-adbc-aeecd19f3282">
+            <cppSignature>bool buttonReadings::DPadLeft</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/DPadLeft</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/DPadLeft</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="50d4f053-77eb-41b1-9f75-f631e0f732ff"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>DPadLeft</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="45cd485f-18a9-4854-aab8-525dcc13548b">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>35</Line>
+          </DefPos>
+        </Members>
+        <Members type="cxxfe.ast.types.Member" uuid="3453d8da-df4f-452e-8314-a069994c8c46">
+          <Access>Public</Access>
+          <Annotations type="mwAnnotation.VariableAnnotation" uuid="51fca69d-8cef-4487-8be1-4453c8396ad2">
+            <cppSignature>bool buttonReadings::DPadRight</cppSignature>
+            <cppType>[bool]</cppType>
+            <description>logical    Data member of C++ class buttonReadings</description>
+            <getterPTKey>DM/?get/buttonReadings/DPadRight</getterPTKey>
+            <isSettable>true</isSettable>
+            <mwType>logical</mwType>
+            <setterPTKey>DM/?set/buttonReadings/DPadRight</setterPTKey>
+            <storage>Value</storage>
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="e7e0535a-cb38-4be1-853c-0a50fead6c35"/>
+          </Annotations>
+          <Type type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+          <Name>DPadRight</Name>
+          <DefPos type="cxxfe.ast.source.SourcePosition" uuid="aee05e2b-59f6-4470-b4fc-a5c230b5f234">
+            <Col>14</Col>
+            <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+            <Line>36</Line>
+          </DefPos>
+        </Members>
+        <Name>buttonReadings</Name>
+        <Scope type="cxxfe.ast.Scope" uuid="1882674b-495b-4380-a8e7-9494accade78">
+          <Annotations type="mwAnnotation.ScopeAnnotation" uuid="5f39df3b-6f67-4850-8bc6-2648fa69f5e0">
+            <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="2a0296b4-5189-4831-9a36-6512ba6eb5a6"/>
+          </Annotations>
+        </Scope>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="9b9861a2-2826-4fdf-bd05-ce1b3ca4d303">
+          <Col>20</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>20</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.TypedefType" uuid="ecec63ec-f1a5-43a6-9bde-43d9b9b15aed">
+        <Type type="cxxfe.ast.types.StructType" uuid="0418bc62-4f71-4cbb-9c9b-ef178eca6c63"/>
+        <Name>buttonReadings</Name>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="43607077-3e18-45b9-b30e-7a218481f540">
+          <Col>7</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>37</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="b94837f0-e6cd-4dbf-91a9-85cfa1b5da57">
+        <ParamTypes type="cxxfe.ast.types.IntegerType" uuid="e43e78bd-5e64-4a80-a21e-8141697d584d"/>
+        <RetType type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="59033436-b115-4d8b-af9e-ffeef9c4a06d">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="ba0c2c4d-a70f-48ea-8edc-9c9aaf491ffd">
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="f7849b33-a8ab-4950-aff8-c487850f37d9">
+            <definitionStatus>Inaccessible</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+        <IsCompilerGenerated>true</IsCompilerGenerated>
+        <Params type="cxxfe.ast.Variable" uuid="f0a6ed42-2e91-4633-b176-31442b08255b">
+          <Type type="cxxfe.ast.types.IntegerType" uuid="e43e78bd-5e64-4a80-a21e-8141697d584d"/>
+        </Params>
+        <SpecialKind>Operator</SpecialKind>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="b94837f0-e6cd-4dbf-91a9-85cfa1b5da57"/>
+        <Name>operator new</Name>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="fab4ebed-ed62-4043-ac83-166c3508fc6d"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="64ada8da-e5d5-4ac5-aeed-0d7b6c8a524e">
+        <ParamTypes type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126"/>
+        <RetType type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="b2e008f9-62b3-43dd-9920-7bfd5a8b05be">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="f001958c-b3ac-4d4e-b55a-e8c018cf969c">
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="59d35d5c-81f9-4989-8590-291dbf103ad9">
+            <definitionStatus>Inaccessible</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+        <IsCompilerGenerated>true</IsCompilerGenerated>
+        <Params type="cxxfe.ast.Variable" uuid="082336b0-b091-4f03-8879-1013dcb958fc">
+          <Type type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126"/>
+        </Params>
+        <SpecialKind>Operator</SpecialKind>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="64ada8da-e5d5-4ac5-aeed-0d7b6c8a524e"/>
+        <Name>operator delete</Name>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="e7fda2b3-381a-4e0a-96f2-38b6d2f6adbb"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="199aacf6-d17f-4278-934c-76f0c238f689">
+        <ParamTypes type="cxxfe.ast.types.IntegerType" uuid="e43e78bd-5e64-4a80-a21e-8141697d584d"/>
+        <RetType type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="2eb5b906-23b1-44c3-a5a6-eab5475bfd17">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="677fabb3-30c5-472a-90ff-4a77837098f4">
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="f422666e-df04-42c1-8702-12bf67780fa6">
+            <definitionStatus>Inaccessible</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+        <IsCompilerGenerated>true</IsCompilerGenerated>
+        <Params type="cxxfe.ast.Variable" uuid="17123ba7-9451-4ec5-9a6f-25cd971bd81f">
+          <Type type="cxxfe.ast.types.IntegerType" uuid="e43e78bd-5e64-4a80-a21e-8141697d584d"/>
+        </Params>
+        <SpecialKind>Operator</SpecialKind>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="199aacf6-d17f-4278-934c-76f0c238f689"/>
+        <Name>operator new[]</Name>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="0e6b0b99-03cf-4cce-b617-1c6b6611b939"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="211ef78d-491f-49a3-97c0-89ca76b31b1e">
+        <ParamTypes type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126"/>
+        <RetType type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="c2334902-8cbe-4db3-9007-c03127da243a">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="896b07cf-752b-486b-8022-0ce791ce8144">
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="80e02e88-56bd-4d2f-aa15-a22add6617eb">
+            <definitionStatus>Inaccessible</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+        <IsCompilerGenerated>true</IsCompilerGenerated>
+        <Params type="cxxfe.ast.Variable" uuid="83d7fec7-6e0d-4b21-bb73-a17311a19f8d">
+          <Type type="cxxfe.ast.types.PointerType" uuid="be997167-839d-4112-869f-352cab115126"/>
+        </Params>
+        <SpecialKind>Operator</SpecialKind>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="211ef78d-491f-49a3-97c0-89ca76b31b1e"/>
+        <Name>operator delete[]</Name>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="aef489c7-0ed9-463d-94dc-48b77ab326c1"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="337170e7-f3ea-469b-a8c6-71e9d59cbbd9">
+        <RetType type="cxxfe.ast.types.BooleanType" uuid="12ee49c0-83d5-4d80-8431-d39421f1d8a8"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="25435797-71f5-480f-8906-2f7695d5c4c6">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="066ada02-af7b-49f2-996a-208f5f253c0f">
+          <cppSignature>bool initRacingWheel()</cppSignature>
+          <cppType>[bool]</cppType>
+          <description>clib.FF_UWP_WIN32_dll.initRacingWheel    Representation of C++ function initRacingWheel</description>
+          <name>clib.FF_UWP_WIN32_dll.initRacingWheel</name>
+          <outputs type="mwAnnotation.Argument" uuid="b72e6ccf-ea8c-4c04-8623-7a3ee7eb109d">
+            <cppType>[bool]</cppType>
+            <direction>Out</direction>
+            <isOwned>true</isOwned>
+            <mwType>logical</mwType>
+            <name>RetVal</name>
+            <storage>Value</storage>
+            <validTypes>logical</validTypes>
+          </outputs>
+          <ptKey>F/initRacingWheel#[bool]</ptKey>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="9dcf21c5-29cf-4420-80e1-8948f172fee8"/>
+        </Annotations>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="337170e7-f3ea-469b-a8c6-71e9d59cbbd9"/>
+        <Name>initRacingWheel</Name>
+        <DeclPos type="cxxfe.ast.source.SourcePosition" uuid="7dbb6d4c-1699-4dad-97e1-fe2a1784e8bb">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>40</Line>
+        </DeclPos>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="57b8065c-b8db-4649-acef-3490bd54b806">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>40</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.IntegerType" uuid="ba222d28-f8ae-43b4-a427-8f62b14927ea">
+        <NumBits>32</NumBits>
+        <Name>int</Name>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="791811a3-bef0-4995-980f-5e5a9f599ffd">
+        <RetType type="cxxfe.ast.types.IntegerType" uuid="ba222d28-f8ae-43b4-a427-8f62b14927ea"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="66a09bfc-1b97-4a13-b5b4-0984d709300d">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="25cde957-54a5-416a-94fc-c8e41b7936dc">
+          <cppSignature>int initForceFeedback()</cppSignature>
+          <cppType>[int]</cppType>
+          <description>clib.FF_UWP_WIN32_dll.initForceFeedback    Representation of C++ function initForceFeedback</description>
+          <name>clib.FF_UWP_WIN32_dll.initForceFeedback</name>
+          <outputs type="mwAnnotation.Argument" uuid="f554ea8c-aa49-4b86-aeaa-be1a79ecfb8b">
+            <cppType>[int]</cppType>
+            <direction>Out</direction>
+            <isOwned>true</isOwned>
+            <mwType>int32</mwType>
+            <name>RetVal</name>
+            <storage>Value</storage>
+            <validTypes>int32</validTypes>
+          </outputs>
+          <ptKey>F/initForceFeedback#[int]</ptKey>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="463d1d9c-1629-4965-9369-8626cdadceb5"/>
+        </Annotations>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="791811a3-bef0-4995-980f-5e5a9f599ffd"/>
+        <Name>initForceFeedback</Name>
+        <DeclPos type="cxxfe.ast.source.SourcePosition" uuid="01932516-d3fe-4eec-8a27-11f1772d3bf1">
+          <Col>17</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>41</Line>
+        </DeclPos>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="2fb20d5a-ffdd-4b78-962a-715c1fb6a1ca">
+          <Col>17</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>41</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.PointerType" uuid="a5935762-4df6-4585-8f92-cb5288957313">
+        <Type type="cxxfe.ast.types.TypedefType" uuid="97bd3229-5aa3-4f67-a348-70aa39fbf9d0"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="df16c54f-be08-4755-a9af-a1e1304449ac">
+        <ParamTypes type="cxxfe.ast.types.PointerType" uuid="a5935762-4df6-4585-8f92-cb5288957313"/>
+        <RetType type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="1de6cc72-84b0-4d63-a080-372c5468179a">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="ec1d9cd3-987d-4d8f-9c5f-0fda2c99bb51">
+          <cppSignature>void readWheelStatus(WheelReadings * wheelValues)</cppSignature>
+          <cppType>[void]</cppType>
+          <description>clib.FF_UWP_WIN32_dll.readWheelStatus    Representation of C++ function readWheelStatus</description>
+          <inputs type="mwAnnotation.Argument" uuid="94986693-3a98-4723-ae12-be2caa9f546b">
+            <cppPosition>1</cppPosition>
+            <cppType>[wheelreadings]Ptr</cppType>
+            <mwType>clib.FF_UWP_WIN32_dll.WheelReadings</mwType>
+            <name>wheelValues</name>
+            <shape>Undefined</shape>
+            <storage>Pointer</storage>
+            <validTypes>clib.FF_UWP_WIN32_dll.WheelReadings</validTypes>
+          </inputs>
+          <name>clib.FF_UWP_WIN32_dll.readWheelStatus</name>
+          <ptKey>F/readWheelStatus@[wheelreadings]Ptr#[void]</ptKey>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="a5b54b5a-f895-444c-b24e-33e80ab5bbcb">
+            <definitionStatus>PartiallySpecified</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+        <Params type="cxxfe.ast.Variable" uuid="46126b1f-88ac-4464-9345-06483a4f5d94">
+          <Type type="cxxfe.ast.types.PointerType" uuid="a5935762-4df6-4585-8f92-cb5288957313"/>
+          <Name>wheelValues</Name>
+        </Params>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="df16c54f-be08-4755-a9af-a1e1304449ac"/>
+        <Name>readWheelStatus</Name>
+        <DeclPos type="cxxfe.ast.source.SourcePosition" uuid="cca116d7-1220-4878-8bd9-0a8abaef44e2">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>42</Line>
+        </DeclPos>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="7ff9d4de-7fcb-49a5-9e39-3ac8a50f8f49">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>42</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="50f7a118-ca44-4ad7-90fc-fa19215ede13">
+        <ParamTypes type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+        <RetType type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="a1d3b73a-ab1e-410a-888c-b4ef937f4da4">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="4250200f-b253-43d3-9db0-65891106810c">
+          <cppSignature>void FF_minus(double gain)</cppSignature>
+          <cppType>[void]</cppType>
+          <description>clib.FF_UWP_WIN32_dll.FF_minus    Representation of C++ function FF_minus</description>
+          <inputs type="mwAnnotation.Argument" uuid="3cfff8d9-b75e-43bb-b32f-bda4fac59cad">
+            <cppPosition>1</cppPosition>
+            <cppType>[double]</cppType>
+            <mwType>double</mwType>
+            <name>gain</name>
+            <storage>Value</storage>
+            <validTypes>double</validTypes>
+          </inputs>
+          <name>clib.FF_UWP_WIN32_dll.FF_minus</name>
+          <ptKey>F/FF_minus@[double]#[void]</ptKey>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="173a9bfa-4e35-48df-a245-127f7c66f5e0"/>
+        </Annotations>
+        <Params type="cxxfe.ast.Variable" uuid="1a0cd800-3109-42a8-9811-20af06d46a61">
+          <Type type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+          <Name>gain</Name>
+        </Params>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="50f7a118-ca44-4ad7-90fc-fa19215ede13"/>
+        <Name>FF_minus</Name>
+        <DeclPos type="cxxfe.ast.source.SourcePosition" uuid="5e1dce98-bb46-4039-aa24-def46d9ae54e">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>43</Line>
+        </DeclPos>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="daf4ad1d-b504-4c58-abb7-a4a451a852ef">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>43</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="75c20b45-7f4e-49f5-b37b-9605837b992a">
+        <ParamTypes type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+        <RetType type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="d343772e-5a32-401c-842b-f1c32b427f15">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="918c7612-360e-461f-a705-a6e0c3c8f497">
+          <cppSignature>void FF_plus(double gain)</cppSignature>
+          <cppType>[void]</cppType>
+          <description>clib.FF_UWP_WIN32_dll.FF_plus    Representation of C++ function FF_plus</description>
+          <inputs type="mwAnnotation.Argument" uuid="ad32e90f-51f4-4668-96a7-6775ddd1d111">
+            <cppPosition>1</cppPosition>
+            <cppType>[double]</cppType>
+            <mwType>double</mwType>
+            <name>gain</name>
+            <storage>Value</storage>
+            <validTypes>double</validTypes>
+          </inputs>
+          <name>clib.FF_UWP_WIN32_dll.FF_plus</name>
+          <ptKey>F/FF_plus@[double]#[void]</ptKey>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="a58df8c9-a9a2-4a50-86d9-e466070ed8e9"/>
+        </Annotations>
+        <Params type="cxxfe.ast.Variable" uuid="d8d4a643-7f98-472e-8773-698f2bdee7d3">
+          <Type type="cxxfe.ast.types.FloatType" uuid="03044b29-64c0-4853-89da-954e04db6540"/>
+          <Name>gain</Name>
+        </Params>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="75c20b45-7f4e-49f5-b37b-9605837b992a"/>
+        <Name>FF_plus</Name>
+        <DeclPos type="cxxfe.ast.source.SourcePosition" uuid="63d86897-d67e-436a-936e-d7491caa74bd">
+          <Col>21</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>44</Line>
+        </DeclPos>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="e1208bd8-dce1-49ca-8a0a-db64cca3c0c2">
+          <Col>21</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>44</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="a202db23-7bdf-43b0-bbb6-5bd317e394ab">
+        <RetType type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="c7ab5828-1bdc-42da-9d18-48d97983a4c5">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="66bb2085-3599-4bfb-8dab-36618ee75fb8">
+          <cppSignature>void FF_zero()</cppSignature>
+          <cppType>[void]</cppType>
+          <description>clib.FF_UWP_WIN32_dll.FF_zero    Representation of C++ function FF_zero</description>
+          <name>clib.FF_UWP_WIN32_dll.FF_zero</name>
+          <ptKey>F/FF_zero#[void]</ptKey>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="99a0dc65-7f6b-4e5d-b338-8acaf803f3f2"/>
+        </Annotations>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="a202db23-7bdf-43b0-bbb6-5bd317e394ab"/>
+        <Name>FF_zero</Name>
+        <DeclPos type="cxxfe.ast.source.SourcePosition" uuid="acdd3cca-4bab-4b5b-a730-b6218d84697e">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>45</Line>
+        </DeclPos>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="7f4eb901-8c10-4271-a3f9-afb888c774d7">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>45</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.PointerType" uuid="7acd49ce-2455-4190-a2b1-fe4e81aaf1e5">
+        <Type type="cxxfe.ast.types.TypedefType" uuid="ecec63ec-f1a5-43a6-9bde-43d9b9b15aed"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="f83000e3-3b74-46d0-9c6b-a1747fb52f1a">
+        <ParamTypes type="cxxfe.ast.types.PointerType" uuid="7acd49ce-2455-4190-a2b1-fe4e81aaf1e5"/>
+        <RetType type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="aed8b402-6aaa-4a45-bffb-e5ca958e79a5">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="247e35d9-c202-4641-b87b-68a117c6ac17">
+          <cppSignature>void readingButton(buttonReadings * bValues)</cppSignature>
+          <cppType>[void]</cppType>
+          <description>clib.FF_UWP_WIN32_dll.readingButton    Representation of C++ function readingButton</description>
+          <inputs type="mwAnnotation.Argument" uuid="f07973ac-ecd9-4813-9ce0-6335342d1bb5">
+            <cppPosition>1</cppPosition>
+            <cppType>[buttonReadings]Ptr</cppType>
+            <mwType>clib.FF_UWP_WIN32_dll.buttonReadings</mwType>
+            <name>bValues</name>
+            <shape>Undefined</shape>
+            <storage>Pointer</storage>
+            <validTypes>clib.FF_UWP_WIN32_dll.buttonReadings</validTypes>
+          </inputs>
+          <name>clib.FF_UWP_WIN32_dll.readingButton</name>
+          <ptKey>F/readingButton@[buttonReadings]Ptr#[void]</ptKey>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="bb657ed2-ac6a-401f-94c8-30f2d60a0bbc">
+            <definitionStatus>PartiallySpecified</definitionStatus>
+          </integrationStatus>
+        </Annotations>
+        <Params type="cxxfe.ast.Variable" uuid="60097575-bc0c-46de-9cda-b13b60501443">
+          <Type type="cxxfe.ast.types.PointerType" uuid="7acd49ce-2455-4190-a2b1-fe4e81aaf1e5"/>
+          <Name>bValues</Name>
+        </Params>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="f83000e3-3b74-46d0-9c6b-a1747fb52f1a"/>
+        <Name>readingButton</Name>
+        <DeclPos type="cxxfe.ast.source.SourcePosition" uuid="70f6fe2a-2143-4b87-b9e3-4ed7eb43e56b">
+          <Col>21</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>46</Line>
+        </DeclPos>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="918cea4e-67e6-47ec-8105-bfb81f89d294">
+          <Col>21</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>46</Line>
+        </DefPos>
+      </Symbols>
+      <Symbols type="cxxfe.ast.types.FunctionType" uuid="5cee7eac-6fa5-4ca3-8f60-1b39c768165c">
+        <RetType type="cxxfe.ast.types.VoidType" uuid="41fae4e6-280e-4af8-9fa7-c89d04f11a88"/>
+      </Symbols>
+      <Symbols type="cxxfe.ast.Function" uuid="959cc50c-6867-42a6-8750-524a0f043f2c">
+        <Annotations type="mwAnnotation.FunctionAnnotation" uuid="04f0b200-3dd7-40dd-bc0e-52e6cf9faa3a">
+          <cppSignature>void kill_FF()</cppSignature>
+          <cppType>[void]</cppType>
+          <description>clib.FF_UWP_WIN32_dll.kill_FF    Representation of C++ function kill_FF</description>
+          <name>clib.FF_UWP_WIN32_dll.kill_FF</name>
+          <ptKey>F/kill_FF#[void]</ptKey>
+          <integrationStatus type="mwAnnotation.IntegrationStatus" uuid="d8bc3c84-849d-4138-b50a-015670f18ee0"/>
+        </Annotations>
+        <StorageClass>Extern</StorageClass>
+        <Type type="cxxfe.ast.types.FunctionType" uuid="5cee7eac-6fa5-4ca3-8f60-1b39c768165c"/>
+        <Name>kill_FF</Name>
+        <DeclPos type="cxxfe.ast.source.SourcePosition" uuid="cc3333ee-fe48-4bc8-82b0-2ef75d473175">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>47</Line>
+        </DeclPos>
+        <DefPos type="cxxfe.ast.source.SourcePosition" uuid="9e4c19cf-6e38-4fee-9b05-3b34baa6172d">
+          <Col>18</Col>
+          <File type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a"/>
+          <Line>47</Line>
+        </DefPos>
+      </Symbols>
+    </Compilations>
+    <Files type="cxxfe.ast.source.SourceFile" uuid="b5b0fe44-9919-4b97-a7bc-de3060e3ae1a">
+      <IsTopLevelFile>true</IsTopLevelFile>
+      <Path>C:\Users\mandl\repos\uwp_force_feedback\Matlab_Simulink\matlab_clibgen\Build_clibgen_dll\FF_UWP_WIN32_dll.h</Path>
+      <WrittenName>C:\Users\mandl\repos\uwp_force_feedback\Matlab_Simulink\matlab_clibgen\Build_clibgen_dll\FF_UWP_WIN32_dll.h</WrittenName>
+    </Files>
+    <LongDoubleNumBits>128</LongDoubleNumBits>
+    <PointerNumBits>64</PointerNumBits>
+    <PtrDiffTypeKind>SignedLongLong</PtrDiffTypeKind>
+    <SizeTypeKind>UnsignedLongLong</SizeTypeKind>
+    <WcharTypeKind>SignedInt</WcharTypeKind>
+  </cxxfe.ast.Project>
+</MF0>

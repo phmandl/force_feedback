@@ -9,7 +9,7 @@ int main(Platform::Array<Platform::String^>^ args)
     CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 
     initRacingWheel();
-    initForceFeedback(0.1*1e7);
+    initForceFeedback();
 
     WheelReadings readings;
     buttonReadings bReadings;
@@ -21,6 +21,8 @@ int main(Platform::Array<Platform::String^>^ args)
         printf("Angle: %lf ", readings.angle);
         printf("Brake: %lf ", readings.brake);
         printf("Throttle: %lf \n", readings.throttle);
+
+        FF_zero();
 
         if (bReadings.X == true) {
             FF_minus(0.5);
