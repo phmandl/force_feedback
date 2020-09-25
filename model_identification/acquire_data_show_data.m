@@ -1,18 +1,28 @@
+%% Addpath for simulink-files
+addpath('Racing_Wheel_Simulink_Files');
 
-load('Experiment_U_step.mat');
+%% Load Data
+load('data_run1');
+% load('data_run2');
+% load('data_with_bounce_back');
 
-y = out.Data.Data(:,2)';
-u = out.Data.Data(:,1)';
-t = out.tout';
-dt = 0.01;
+%% Pre-Processing
+y = data.output;
+u = data.input;
+t = data.time;
+dt = t(2) - t(1);
 
-udot_num_noisy = [diff(y)/dt 0];
-
+%% Calculate velocity
+udot_num_noisy = [diff(y)/dt;0];
 kernel_smoothing = [1 1 1 1] / norm([1 1 1 1])^2;
+
 u_smoothened = conv(y,kernel_smoothing,'same');
 
-udot_smoothing_num_noisy = [diff(u_smoothened)/dt 0];
+udot_smoothing_num_noisy = [diff(u_smoothened)/dt;0];
+udot_smoothing_num_noisy(1) = 0;
+udot_smoothing_num_noisy(end-10:end) = 0;
 
+%% Plot data
 figure; plot(t,y); grid on
 hold on; plot(t,u_smoothened,'r-','LineWidth',2);
 xlabel('time');
