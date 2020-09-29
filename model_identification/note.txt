@@ -1,0 +1,2 @@
+Thrustmaster Racing Wheel T300RS configured with maximal/minimal wheel angel --> [-1080 degree, 1080 degree]
+Save data files in this folder, are in the range of [-1,1] --> multiply by 1080 --> real angle
