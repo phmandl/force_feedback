@@ -1,4 +1,4 @@
-# uwp_force_feedback
+# Force-Feedback for MATLAB and SIMULINK
 This repository contains all project files for building, running the custom interface library for a gaming racing wheel for MATLAB and SIMULINK. The code was verified to run with a ThrustMaster R300TS wheel and pedal set-up. 
 
 Folder structure:
