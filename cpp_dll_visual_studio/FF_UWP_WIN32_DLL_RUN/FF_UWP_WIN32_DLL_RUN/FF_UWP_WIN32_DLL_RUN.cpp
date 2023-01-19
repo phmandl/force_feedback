@@ -7,7 +7,7 @@ bool* p;
 int main(Platform::Array<Platform::String^>^ args)
 {
     CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
-
+     
     initRacingWheel();
     initForceFeedback();
 

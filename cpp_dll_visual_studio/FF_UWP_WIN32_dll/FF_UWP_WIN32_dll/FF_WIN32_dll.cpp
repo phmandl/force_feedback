@@ -39,6 +39,7 @@ bool initRacingWheel()
 
         if (size == 0) {
             //std::cout << "Connecting...\n";
+            printf("Connecting...");
 
             counter += 1;
 
@@ -48,6 +49,7 @@ bool initRacingWheel()
         }
         else {
             //std::cout << "Connected!\n";
+            printf("Connected...");
             return true;
         }
 
@@ -68,38 +70,45 @@ int initForceFeedback() {
     effect_minus->SetParameters(Windows::Foundation::Numerics::float3(+1.0, 0.0f, 0.0f), time);
 
     IAsyncOperation<ForceFeedbackLoadEffectResult>^ request1 = wheel->WheelMotor->LoadEffectAsync(effect_minus);
+    Sleep(100);
+    effect_minus->Gain = 0;
+    effect_minus->Start();
 
     int error = 0;
 
-    auto task1 = create_task(request1);
-    task1.then([&error](ForceFeedbackLoadEffectResult result) {
-        if (ForceFeedbackLoadEffectResult::Succeeded == result)
-        {
-			effect_minus->Gain = 0;
-			effect_minus->Start();
-        }
-        else
-        {
-            error = -1;
-        }
-        }).wait();
+   // auto task1 = create_task(request1);
+   // task1.then([&error](ForceFeedbackLoadEffectResult result) {
+   //     if (ForceFeedbackLoadEffectResult::Succeeded == result)
+   //     {
+			//effect_minus->Gain = 0;
+			//effect_minus->Start();
+   //     }
+   //     else
+   //     {
+   //         error = -1;
+   //     }
+   //     }).wait();
 
-    IAsyncOperation<ForceFeedbackLoadEffectResult>^ request2 = wheel->WheelMotor->LoadEffectAsync(effect_plus);
 
-    auto task2 = create_task(request2);
-    task2.then([&error](ForceFeedbackLoadEffectResult result) {
-        if (ForceFeedbackLoadEffectResult::Succeeded == result)
-        {
-			effect_plus->Gain = 0;
-			effect_plus->Start();
-        }
-        else
-        {
-            error = -1;
-        }
-        }).wait();
+   IAsyncOperation<ForceFeedbackLoadEffectResult>^ request2 = wheel->WheelMotor->LoadEffectAsync(effect_plus);
+   Sleep(100);
+   effect_plus->Gain = 0;
+   effect_plus->Start();
 
-        return error;
+   // auto task2 = create_task(request2);
+   // task2.then([&error](ForceFeedbackLoadEffectResult result) {
+   //     if (ForceFeedbackLoadEffectResult::Succeeded == result)
+   //     {
+			//effect_plus->Gain = 0;
+			//effect_plus->Start();
+   //     }
+   //     else
+   //     {
+   //         error = -1;
+   //     }
+   //     }).wait();
+
+    return error;
 }
 
 void readWheelStatus(WheelReadings* wheelValues) {

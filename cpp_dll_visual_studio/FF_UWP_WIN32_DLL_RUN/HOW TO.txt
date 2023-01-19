@@ -1,3 +1,8 @@
 In the property pages:
 C/C++ --> See Additional Include Directories --> Static Path to header file of the .dll
 Build Events --> Post-Build-Event --> Command Line --> xcopy command with static path to x64/Debug/.dll
+
+
+change: C/C++ --> additional include directories
+
+Change "Additional #using Directories" --> to current system version!

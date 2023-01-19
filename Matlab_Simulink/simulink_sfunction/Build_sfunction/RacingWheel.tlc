@@ -1,5 +1,5 @@
 %% File : RacingWheel.tlc
-%% Created : Thu Sep 24 15:29:40 2020
+%% Created : Thu Jan 19 12:45:50 2023
 %%
 %% Description: 
 %%   Simulink Coder wrapper functions interface generated for 
@@ -22,6 +22,147 @@
 %%      generated code.
 %%
 %function BlockTypeSetup(block, system) Output
+
+  %if IsModelReferenceSimTarget() || CodeFormat == "S-Function" || ::isRAccel
+    %assign hFileName = "RacingWheel_accel_wrapper"
+    %assign hFileNameMacro = FEVAL("upper", hFileName)
+    %openfile hFile = "%<hFileName>.h"
+    %selectfile hFile
+    #ifndef _%<hFileNameMacro>_H_
+    #define _%<hFileNameMacro>_H_
+
+    #ifdef MATLAB_MEX_FILE
+    #include "tmwtypes.h"
+    #else
+    #include "rtwtypes.h"
+    #endif
+    #ifdef __cplusplus
+    #define SFB_EXTERN_C extern "C"
+    #else
+    #define SFB_EXTERN_C extern
+    #endif
+    SFB_EXTERN_C void RacingWheel_Start_wrapper_accel(const real_T *Ts_FF, const int_T p_width0);
+    SFB_EXTERN_C void RacingWheel_Outputs_wrapper_accel(const real_T *FF,
+			boolean_T *gearup,
+			boolean_T *geardown,
+			boolean_T *ST,
+			boolean_T *SE,
+			boolean_T *X,
+			boolean_T *O,
+			boolean_T *Square,
+			boolean_T *Triangle,
+			boolean_T *L2,
+			boolean_T *R2,
+			boolean_T *L3,
+			boolean_T *R3,
+			boolean_T *DPadDown,
+			boolean_T *DPadUp,
+			boolean_T *DPadLeft,
+			boolean_T *DPadRight,
+			real_T *throttle,
+			real_T *brake,
+			real_T *clutch,
+			real_T *angle,
+			const real_T *Ts_FF, const int_T p_width0);
+    SFB_EXTERN_C void RacingWheel_Terminate_wrapper_accel(const real_T *Ts_FF, const int_T p_width0);
+    #undef SFB_EXTERN_C
+    #endif
+    %closefile hFile
+
+    %assign cFileName = "RacingWheel_accel_wrapper"
+    %openfile cFile = "%<cFileName>.cpp"
+    %selectfile cFile
+    #include <string.h>
+    #ifdef MATLAB_MEX_FILE
+    #include "tmwtypes.h"
+    #else
+    #include "rtwtypes.h"
+    #endif
+    #include "%<hFileName>.h"
+    
+
+    extern void RacingWheel_Start_wrapper(const real_T *Ts_FF, const int_T p_width0);
+    extern void RacingWheel_Outputs_wrapper(const real_T *FF,
+			boolean_T *gearup,
+			boolean_T *geardown,
+			boolean_T *ST,
+			boolean_T *SE,
+			boolean_T *X,
+			boolean_T *O,
+			boolean_T *Square,
+			boolean_T *Triangle,
+			boolean_T *L2,
+			boolean_T *R2,
+			boolean_T *L3,
+			boolean_T *R3,
+			boolean_T *DPadDown,
+			boolean_T *DPadUp,
+			boolean_T *DPadLeft,
+			boolean_T *DPadRight,
+			real_T *throttle,
+			real_T *brake,
+			real_T *clutch,
+			real_T *angle,
+			const real_T *Ts_FF, const int_T p_width0);
+    extern void RacingWheel_Terminate_wrapper(const real_T *Ts_FF, const int_T p_width0);
+    void RacingWheel_Start_wrapper_accel(const real_T *Ts_FF, const int_T p_width0){
+    RacingWheel_Start_wrapper(Ts_FF, p_width0);
+    }
+    void RacingWheel_Outputs_wrapper_accel(const real_T *FF,
+			boolean_T *gearup,
+			boolean_T *geardown,
+			boolean_T *ST,
+			boolean_T *SE,
+			boolean_T *X,
+			boolean_T *O,
+			boolean_T *Square,
+			boolean_T *Triangle,
+			boolean_T *L2,
+			boolean_T *R2,
+			boolean_T *L3,
+			boolean_T *R3,
+			boolean_T *DPadDown,
+			boolean_T *DPadUp,
+			boolean_T *DPadLeft,
+			boolean_T *DPadRight,
+			real_T *throttle,
+			real_T *brake,
+			real_T *clutch,
+			real_T *angle,
+			const real_T *Ts_FF, const int_T p_width0){
+    RacingWheel_Outputs_wrapper(FF,
+			gearup,
+			geardown,
+			ST,
+			SE,
+			X,
+			O,
+			Square,
+			Triangle,
+			L2,
+			R2,
+			L3,
+			R3,
+			DPadDown,
+			DPadUp,
+			DPadLeft,
+			DPadRight,
+			throttle,
+			brake,
+			clutch,
+			angle,
+			Ts_FF, p_width0);
+    }
+    void RacingWheel_Terminate_wrapper_accel(const real_T *Ts_FF, const int_T p_width0){
+    RacingWheel_Terminate_wrapper(Ts_FF, p_width0);
+    }
+
+    %closefile cFile
+
+    %<LibAddToCommonIncludes("%<hFileName>.h")>
+    %<LibAddToModelSources("%<cFileName>")>
+
+  %else
   %openfile externs
 
 
@@ -54,6 +195,8 @@
 
   %closefile externs
   %<LibCacheExtern(externs)>
+
+  %endif
   %%
 %endfunction
 
@@ -69,7 +212,13 @@
   %else
     %assign pp1 = LibBlockParameterAddr(P1, "", "", 0)
   %endif
-  RacingWheel_Start_wrapper(%<pp1>, %<param_width1>);
+  
+  %if IsModelReferenceSimTarget() || CodeFormat == "S-Function" || ::isRAccel
+    RacingWheel_Start_wrapper_accel(%<pp1>, %<param_width1>);
+  %else
+    RacingWheel_Start_wrapper(%<pp1>, %<param_width1>);
+  %endif
+
 %endfunction
 %% Function: Outputs ==========================================================
 %%
@@ -106,7 +255,13 @@
   %else
     %assign pp1 = LibBlockParameterAddr(P1, "", "", 0)
   %endif
-  RacingWheel_Outputs_wrapper(%<pu0>, %<py0>, %<py1>, %<py2>, %<py3>, %<py4>, %<py5>, %<py6>, %<py7>, %<py8>, %<py9>, %<py10>, %<py11>, %<py12>, %<py13>, %<py14>, %<py15>, %<py16>, %<py17>, %<py18>, %<py19>, %<pp1>, %<param_width1>);
+  
+  %if IsModelReferenceSimTarget() || CodeFormat == "S-Function" || ::isRAccel
+    RacingWheel_Outputs_wrapper_accel(%<pu0>, %<py0>, %<py1>, %<py2>, %<py3>, %<py4>, %<py5>, %<py6>, %<py7>, %<py8>, %<py9>, %<py10>, %<py11>, %<py12>, %<py13>, %<py14>, %<py15>, %<py16>, %<py17>, %<py18>, %<py19>, %<pp1>, %<param_width1>);
+  %else
+    RacingWheel_Outputs_wrapper(%<pu0>, %<py0>, %<py1>, %<py2>, %<py3>, %<py4>, %<py5>, %<py6>, %<py7>, %<py8>, %<py9>, %<py10>, %<py11>, %<py12>, %<py13>, %<py14>, %<py15>, %<py16>, %<py17>, %<py18>, %<py19>, %<pp1>, %<param_width1>);
+  %endif
+
   %%
 %endfunction
 
@@ -121,7 +276,13 @@
   %else
     %assign pp1 = LibBlockParameterAddr(P1, "", "", 0)
   %endif
-  RacingWheel_Terminate_wrapper(%<pp1>, %<param_width1>);
+  
+  %if IsModelReferenceSimTarget() || CodeFormat == "S-Function" || ::isRAccel
+    RacingWheel_Terminate_wrapper_accel(%<pp1>, %<param_width1>);
+  %else
+    RacingWheel_Terminate_wrapper(%<pp1>, %<param_width1>);
+  %endif
+
 %endfunction
 
 %% [EOF] RacingWheel.tlc

@@ -26,7 +26,7 @@
  * | See matlabroot/simulink/src/sfuntmpl_doc.c for a more detailed template |
  *  ------------------------------------------------------------------------- 
  *
- * Created: Thu Sep 24 15:29:40 2020
+ * Created: Thu Jan 19 12:45:50 2023
  */
 
 #define S_FUNCTION_LEVEL 2
@@ -388,11 +388,11 @@
 
 #define SFUNWIZ_GENERATE_TLC  1
 #define SOURCEFILES           "__SFB__FF_UWP_WIN32_dll.lib"
-#define PANELINDEX            8
+#define PANELINDEX            N/A
 #define USE_SIMSTRUCT         0
 #define SHOW_COMPILE_STEPS    0
 #define CREATE_DEBUG_MEXFILE  1
-#define SAVE_CODE_ONLY        0
+#define SAVE_CODE_ONLY        1
 #define SFUNWIZ_REVISION      3.0
 /* %%%-SFUNWIZ_defines_Changes_END --- EDIT HERE TO _BEGIN */
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -462,7 +462,7 @@ static void mdlCheckParameters(SimStruct *S)
 
     EXIT_POINT:
     if (invalidParam) {
-        char parameterErrorMsg[1024];
+        static char parameterErrorMsg[1024];
         sprintf(parameterErrorMsg, "The data type and or complexity of parameter %d does not match the "
                 "information specified in the S-function Builder dialog. "
                 "For non-double parameters you will need to cast them using int8, int16, "
@@ -599,7 +599,7 @@ static void mdlInitializeSizes(SimStruct *S)
     ssSetNumModes(S, 0);
     ssSetNumNonsampledZCs(S, 0);
 
-    ssSetSimulinkVersionGeneratedIn(S, "10.0");
+    ssSetSimulinkVersionGeneratedIn(S, "10.3");
 
     /* Take care when specifying exception free code - see sfuntmpl_doc.c */
     ssSetOptions(S, (SS_OPTION_EXCEPTION_FREE_CODE |
